@@ -459,6 +459,98 @@
       margin-bottom: 5px;
     }
 
+    .authorization-sample {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .authorization-sample h4 {
+      color: #0b3b7e;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .auth-sample-grid {
+      display: grid;
+      grid-template-columns: minmax(145px, 0.8fr) minmax(0, 1.2fr);
+      gap: 14px;
+    }
+
+    .sample-qr-box,
+    .sample-auth-text {
+      background: white;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .sample-qr-box {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 180px;
+    }
+
+    .sample-qr-icon {
+      width: 82px;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #1266b5;
+      border-radius: 10px;
+      color: #1266b5;
+      font-size: 54px;
+      line-height: 1;
+      background: #f8fbff;
+    }
+
+    .sample-qr-box strong,
+    .sample-auth-text strong {
+      color: #0b3b7e;
+      font-size: 14px;
+    }
+
+    .sample-only-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .sample-auth-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .sample-auth-text code {
+      display: block;
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 9px;
+      background: #0f172a;
+      color: #e2e8f0;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .sample-auth-text p {
+      color: #64748b;
+      font-size: 13px;
+    }
+
     .guide-coming-soon {
       max-width: 1000px;
       margin: 18px auto 0;
@@ -711,6 +803,11 @@
       .guide-feature {
         padding: 22px 16px;
       }
+
+      .auth-sample-grid {
+        grid-template-columns: 1fr;
+      }
+
 
       .guide-navigation {
         grid-template-columns: 1fr 1fr;
@@ -1324,6 +1421,111 @@
         </div>
       </article>
 
+      <!-- GUIDE 4: OFFICIAL VERIFICATION -->
+      <article
+        class="guide-slide"
+        data-title="Official Verification"
+        aria-hidden="true"
+      >
+        <div class="guide-feature">
+          <div class="guide-feature-header">
+            <span class="guide-label">SK Official Access</span>
+
+            <h3>Official Verification</h3>
+
+            <p>
+              SK Official accounts require trusted authorization before
+              official access can be granted.
+            </p>
+          </div>
+
+          <div class="guide-layout">
+            <div class="guide-image-card">
+              <img
+                class="guide-image"
+                src="official-verification.png"
+                alt="SK Kabunga-an Official Verification screen"
+              >
+
+              <p class="image-caption">
+                Official Verification screen for SK Official access.
+              </p>
+            </div>
+
+            <div>
+              <div class="guide-steps">
+                <div class="guide-step">
+                  <div class="step-number">1</div>
+
+                  <div class="step-content">
+                    <h4>Select Your Real SK Position</h4>
+                    <p>
+                      Choose the SK position that matches your actual
+                      official role before requesting authorization.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">2</div>
+
+                  <div class="step-content">
+                    <h4>Contact the Developer</h4>
+                    <p>
+                      Contact the developer to request the private
+                      Founding Official QR or authorization text needed
+                      for the first trusted SK Official registration.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">3</div>
+
+                  <div class="step-content">
+                    <h4>Use the Provided Authorization</h4>
+                    <p>
+                      Scan the Founding Official QR or enter the
+                      authorization text supplied directly by the developer.
+                      The sample shown below is for illustration only.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="authorization-sample">
+                <h4>Sample Founding Official Authorization</h4>
+
+                <div class="auth-sample-grid">
+                  <div class="sample-qr-box">
+                    <div class="sample-qr-icon" aria-hidden="true">▦</div>
+                    <strong>Sample Founding Official QR</strong>
+                    <span class="sample-only-badge">SAMPLE ONLY • NOT VALID</span>
+                  </div>
+
+                  <div class="sample-auth-text">
+                    <strong>Sample Authorization Text</strong>
+                    <code>FOUNDING-OFFICIAL-DEMO-ONLY</code>
+                    <span class="sample-only-badge">SAMPLE ONLY • NOT VALID</span>
+                    <p>
+                      A real authorization QR or text will be provided
+                      privately by the developer after contact and verification.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-note">
+                <strong>Keep the Real Authorization Private</strong>
+                Do not post or share the real Founding Official QR or
+                authorization text publicly. It is intended only for the
+                authorized registration process.
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <div class="guide-navigation" aria-label="User Guide navigation">
         <button
           type="button"
@@ -1336,7 +1538,7 @@
         </button>
 
         <div class="guide-progress" id="guide-progress" aria-live="polite">
-          Guide 1 of 3
+          Guide 1 of 4
           <span class="guide-progress-title">Create Account</span>
         </div>
 
