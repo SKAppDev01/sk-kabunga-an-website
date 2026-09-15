@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0b3b7e" name="theme-color"/>
+<title>User Guide | SK Kabunga-an Official App</title>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f8fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    section {
+      padding: 65px 20px;
+      scroll-margin-top: 120px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      color: #1266b5;
+      font-size: 31px;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #0b3b7e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
+      will-change: transform;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+    }
+
+
+    header.header-hidden {
+      transform: translateY(-100%);
+      box-shadow: none;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: white;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+      padding: 2px;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      padding-bottom: 7px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 5px 1px;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ffd21f;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #082f6b 0%,
+          #0b4fa8 48%,
+          #1677e8 100%
+        );
+      color: white;
+      text-align: center;
+      padding: 65px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      top: -130px;
+      right: -130px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      bottom: -130px;
+      left: -110px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 22px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 13px;
+    }
+
+    .hero-subtitle {
+      color: #ffd21f;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #edf6ff;
+      font-size: 17px;
+    }
+
+    /* BUTTONS */
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 10px;
+      background: white;
+      color: #0b4fa8;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover,
+    .button:focus {
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      color: white;
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    /* OFFICIAL LOGOS */
+
+    .official-logos {
+      background: white;
+    }
+
+    .logo-grid {
+      max-width: 760px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .logo-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-card {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      background: white;
+      padding: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 2px solid #dbeafe;
+      box-shadow: 0 5px 22px rgba(11, 79, 168, 0.16);
+    }
+
+    .logo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background: #f4f8ff;
+    }
+
+    .about-card {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 5px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .about-card p {
+      color: #475569;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .about-card p + p {
+      margin-top: 17px;
+    }
+
+    /* FEATURES */
+
+    .features-section {
+      background: white;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      border-top: 4px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      color: #0b4fa8;
+      margin-bottom: 9px;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    /* USER GUIDE */
+
+    .guide-section {
+      background: #eef5ff;
+    }
+
+
+
+    .guide-sequence-divider {
+      max-width: 1000px;
+      margin: 34px auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #0b4fa8;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .guide-sequence-divider::before,
+    .guide-sequence-divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: #bfdbfe;
+    }
+
+    .guide-sequence-divider span {
+      white-space: nowrap;
+    }
+
+    /* USER GUIDE CATEGORIES */
+
+    .guide-category-switcher {
+      max-width: 1000px;
+      margin: 0 auto 24px;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      background: #dbeafe;
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+    }
+
+    .guide-category-button {
+      border: 0;
+      border-radius: 11px;
+      padding: 13px 14px;
+      background: transparent;
+      color: #0b4fa8;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .guide-category-button:hover,
+    .guide-category-button:focus {
+      transform: translateY(-1px);
+    }
+
+    .guide-category-button.active {
+      background: #0b4fa8;
+      color: white;
+      box-shadow: 0 4px 14px rgba(11, 79, 168, 0.18);
+    }
+
+    .guide-category-panel {
+      display: none;
+    }
+
+    .guide-category-panel.active {
+      display: block;
+    }
+
+    .download-guide-visual {
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 16px;
+      background:
+        linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.18);
+    }
+
+    .download-guide-icon {
+      width: 86px;
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 22px;
+      background: white;
+      color: #0f172a;
+      font-size: 44px;
+      font-weight: 900;
+    }
+
+    .download-guide-visual strong {
+      font-size: 20px;
+    }
+
+    .download-guide-visual span {
+      max-width: 270px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .download-security-note {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
+
+    .download-security-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #047857;
+    }
+
+    .guide-feature {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #dbeafe;
+      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.09);
+    }
+
+    .guide-feature-header {
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .guide-label {
+      display: inline-block;
+      background: #dbeafe;
+      color: #0b4fa8;
+      padding: 6px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .guide-feature-header h3 {
+      color: #082f6b;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .guide-feature-header p {
+      color: #64748b;
+      font-size: 16px;
+    }
+
+    .guide-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 390px) 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .guide-image-card {
+      background: linear-gradient(145deg, #e8f2ff, #f8fbff);
+      padding: 16px;
+      border-radius: 20px;
+      border: 1px solid #dbeafe;
+    }
+
+    .guide-image {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.16);
+    }
+
+    .image-caption {
+      color: #64748b;
+      font-size: 13px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 15px;
+      padding: 18px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+    }
+
+    .step-number {
+      min-width: 38px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #1266b5;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .step-content h4 {
+      color: #0b3b7e;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .guide-note {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #fff8df;
+      border: 1px solid #fde68a;
+      color: #713f12;
+    }
+
+    .guide-note strong {
+      display: block;
+      color: #92400e;
+      margin-bottom: 5px;
+    }
+
+    .guide-substep {
+      margin-top: 28px;
+      padding-top: 26px;
+      border-top: 2px solid #dbeafe;
+    }
+
+    .guide-substep-header {
+      margin-bottom: 20px;
+    }
+
+    .guide-substep-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #0b4fa8;
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .guide-substep-header h4 {
+      color: #082f6b;
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .guide-substep-header p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .guide-substep .guide-image-card {
+      position: static;
+    }
+
+
+    /* GUIDE 4: ALIGNED VERIFICATION FLOW */
+
+    .verification-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .verification-section {
+      padding: 4px 0 8px;
+    }
+
+    .verification-section-header {
+      margin-bottom: 20px;
+    }
+
+    .verification-section-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #0b4fa8;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .verification-section h4 {
+      color: #082f6b;
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .verification-section-header p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .verification-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 390px) 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .verification-copy {
+      min-width: 0;
+    }
+
+    .verification-divider {
+      position: relative;
+      height: 54px;
+      margin: 18px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .verification-divider::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #93c5fd 14%, #93c5fd 86%, transparent);
+    }
+
+    .verification-divider span {
+      position: relative;
+      z-index: 1;
+      padding: 7px 14px;
+      border: 1px solid #93c5fd;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #0b4fa8;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 3px 12px rgba(11, 79, 168, 0.08);
+    }
+
+    .verification-section .guide-image-card {
+      width: 100%;
+      max-width: 390px;
+      margin: 0;
+    }
+
+    .verification-section .authorization-sample {
+      margin-top: 24px;
+    }
+
+    .authorization-sample {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .authorization-sample h4 {
+      color: #0b3b7e;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .auth-sample-grid {
+      display: grid;
+      grid-template-columns: minmax(145px, 0.8fr) minmax(0, 1.2fr);
+      gap: 14px;
+    }
+
+    .sample-qr-box,
+    .sample-auth-text {
+      background: white;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .sample-qr-box {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 180px;
+    }
+
+    .sample-qr-icon {
+      width: 82px;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #1266b5;
+      border-radius: 10px;
+      color: #1266b5;
+      font-size: 54px;
+      line-height: 1;
+      background: #f8fbff;
+    }
+
+    .sample-qr-box strong,
+    .sample-auth-text strong {
+      color: #0b3b7e;
+      font-size: 14px;
+    }
+
+    .sample-only-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .sample-auth-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .sample-auth-text code {
+      display: block;
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 9px;
+      background: #0f172a;
+      color: #e2e8f0;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .sample-auth-text p {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    .guide-coming-soon {
+      max-width: 1000px;
+      margin: 18px auto 0;
+      padding: 16px 18px;
+      text-align: center;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid #dbeafe;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+
+    .download-guide-slide {
+      display: none;
+    }
+
+    .download-guide-slide.active {
+      display: block;
+    }
+
+    .guide-slide {
+      display: none;
+    }
+
+    .guide-slide.active {
+      display: block;
+    }
+
+    .guide-navigation {
+      max-width: 1000px;
+      margin: 18px auto 0;
+      display: grid;
+      grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+      gap: 14px;
+      align-items: center;
+      padding: 14px;
+      background: white;
+      border: 1px solid #dbeafe;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(11, 79, 168, 0.07);
+    }
+
+    .guide-nav-button {
+      border: 0;
+      border-radius: 11px;
+      padding: 12px 16px;
+      background: #1266b5;
+      color: white;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .guide-nav-button:hover:not(:disabled),
+    .guide-nav-button:focus:not(:disabled) {
+      transform: translateY(-1px);
+    }
+
+    .guide-nav-button:disabled {
+      background: #cbd5e1;
+      color: #64748b;
+      cursor: not-allowed;
+      opacity: 0.75;
+    }
+
+    #guide-prev,
+    #download-guide-prev {
+      justify-self: start;
+    }
+
+    #guide-next,
+    #download-guide-next {
+      justify-self: end;
+    }
+
+    .guide-progress {
+      min-width: 140px;
+      text-align: center;
+      color: #0b3b7e;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .guide-progress-title {
+      display: block;
+      margin-top: 2px;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* PRIVACY */
+
+    .privacy-section {
+      background: white;
+    }
+
+    .privacy-card {
+      max-width: 900px;
+      margin: auto;
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 5px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+    }
+
+    .privacy-card p {
+      color: #475569;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .privacy-card p + p {
+      margin-top: 17px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #061f46;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 45px 20px 30px;
+    }
+
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 23px;
+    }
+
+    .footer-logos img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+      padding: 2px;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-title {
+      color: white;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .footer-subtitle {
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .copyright {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      header {
+        transition: none;
+      }
+    }
+
+    /* TABLET */
+
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 430px;
+        gap: 30px;
+      }
+
+      .guide-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .verification-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .verification-section .guide-image-card {
+        margin: 0 auto;
+      }
+
+      .guide-image-card {
+        max-width: 430px;
+        margin: auto;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .header-container {
+        padding: 12px 12px 9px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      nav {
+        gap: 3px 17px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 55px 20px 65px;
+      }
+
+      .hero-logo {
+        width: 155px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 16px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 22px;
+      }
+
+      .logo-card {
+        width: 125px;
+        height: 125px;
+      }
+
+      .about-card,
+      .privacy-card {
+        padding: 25px 22px;
+      }
+
+      .guide-feature {
+        padding: 22px 16px;
+      }
+
+      .auth-sample-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+
+      .guide-category-switcher {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-navigation {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .guide-progress {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        min-width: 0;
+      }
+
+      #guide-prev,
+      #guide-next {
+        width: 100%;
+        justify-self: stretch;
+      }
+
+      .guide-feature-header h3 {
+        font-size: 25px;
+      }
+
+      .guide-step {
+        padding: 15px;
+      }
+
+      .step-number {
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+      }
+    }
+
+    /* SMALL PHONES */
+
+    @media (max-width: 390px) {
+      nav {
+        gap: 3px 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .logo-card {
+        width: 110px;
+        height: 110px;
+      }
+    }
+  
+
+    .guide-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 22px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #bfdbfe;
+      color: #0b4fa8;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(11, 79, 168, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .guide-back-home:hover,
+    .guide-back-home:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(11, 79, 168, 0.12);
+    }
+</style>
+</head>
+<body>
+<header>
+<div class="header-container">
+<div class="brand">
+<img alt="SK Kabunga-an Official App Logo" src="sk-kabunga-an-logo.png"/>
+<span>SK Kabunga-an</span>
+</div>
+<nav>
+<a href="index.html#home">Home</a>
+<a href="index.html#logos">Logos</a>
+<a href="index.html#about">About</a>
+<a href="index.html#features">Features</a>
+<a href="user-guide.html">User Guide</a>
+<a href="index.html#privacy">Privacy</a>
+</nav>
+</div>
+</header>
+
+
+
+
+<section class="guide-section" id="guide">
+<div class="container"><a aria-label="Back to website home page" class="guide-back-home" href="index.html" id="guide-back-home">
+          ← Back to Home
+        </a>
+<div class="section-title">
+<h2>User Guide</h2>
+<p>
+          Step-by-step instructions for using the
+          SK Kabunga-an Official App.
+        </p>
+</div>
+<div aria-label="User Guide categories" class="guide-category-switcher" role="tablist">
+<button aria-controls="download-guide-panel" aria-selected="true" class="guide-category-button active" data-guide-category="download" id="guide-category-download" role="tab" type="button">
+          Download &amp; Installation
+        </button>
+<button aria-controls="account-guide-panel" aria-selected="false" class="guide-category-button" data-guide-category="account" id="guide-category-account" role="tab" type="button">
+          Account Creation
+        </button>
+</div>
+<div aria-labelledby="guide-category-download" class="guide-category-panel active" data-category-panel="download" id="download-guide-panel" role="tabpanel">
+<div aria-hidden="false" class="guide-feature download-guide-slide active" data-download-step="1" data-title="Open the Official GitHub Download Page">
+<div class="guide-feature-header">
+<span class="guide-label">Download Guide · Step 1</span>
+<h3>Open the Official GitHub Download Page</h3>
+<p>
+        Start by opening the official SK Kabunga-an app repository on GitHub.
+        This is the official download location provided by the developer.
+      </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="Official SK Kabunga-an GitHub repository opened in a mobile browser" class="guide-image" src="download-step-1.png"/>
+<p class="image-caption">
+          The official SK Kabunga-an app GitHub repository viewed on a mobile browser.
+        </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Open the Official Repository</h4>
+<p>
+                Tap the official GitHub link below. It will open the
+                SK Kabunga-an Official App repository in your browser,
+                similar to the screenshot shown here.
+              </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Confirm You Are on the Correct Page</h4>
+<p>
+                Check that the repository belongs to
+                <strong>SKAppDev01</strong> and is named
+                <strong>sk-kabunga-an-official-app</strong> before
+                continuing to the next download step.
+              </p>
+</div>
+</div>
+</div>
+<a class="cta-button primary" href="https://github.com/SKAppDev01/sk-kabunga-an-official-app" rel="noopener noreferrer" style="display:inline-flex; margin-top:18px;" target="_blank">
+          Open Official GitHub Repository
+        </a>
+<div class="download-security-note">
+<strong>No GitHub Account Required</strong>
+          You can open the public repository and download the app without
+          creating or signing in to a GitHub account. Continue with Step 2
+          once you are on this page.
+        </div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="guide-feature download-guide-slide" data-download-step="2" data-title="Find the Latest Release">
+<div class="guide-feature-header">
+<span class="guide-label">Download Guide · Step 2</span>
+<h3>Scroll Down and Find the Latest Release</h3>
+<p>
+      You do not need to create or sign in to a GitHub account to download
+      the app. From the repository page, simply scroll down until you reach
+      the <strong>Releases</strong> section.
+    </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="GitHub repository page showing the Releases section with the latest SK Kabunga-an Official App release" class="guide-image" src="download-step-2.png"/>
+<p class="image-caption">
+        Scroll toward the bottom of the repository page until the Releases
+        section appears.
+      </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>No GitHub Account Is Needed</h4>
+<p>
+              The repository is public, so you can download the app without
+              creating a GitHub account or signing in.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Scroll Down the Repository Page</h4>
+<p>
+              Keep scrolling toward the bottom of the page until you see the
+              section labeled <strong>Releases</strong>.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Look for the Latest Release</h4>
+<p>
+              Find the release with the green <strong>Latest</strong> badge.
+              The version number may change whenever a newer version of the
+              app is published.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Open the Release</h4>
+<p>
+              Tap the latest SK Kabunga-an Official App release to continue
+              to the next download step.
+            </p>
+</div>
+</div>
+</div>
+<div class="download-security-note">
+<strong>Tip</strong>
+        If you see a newer version than the one shown in this screenshot,
+        use the release marked <strong>Latest</strong>.
+      </div>
+</div>
+</div>
+</div><div aria-hidden="true" class="guide-feature download-guide-slide" data-download-step="3" data-title="Open the Release Page">
+<div class="guide-feature-header">
+<span class="guide-label">Download Guide · Step 3</span>
+<h3>Open the Release Page</h3>
+<p>
+      After tapping the latest release from the Releases section,
+      GitHub will open the full release page for the SK Kabunga-an
+      Official App.
+    </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="GitHub release page for SK Kabunga-an Official App version 1.0.0" class="guide-image" src="download-step-3.png"/>
+<p class="image-caption">
+        The release page shows the app version, release title,
+        description, and highlights for that release.
+      </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Review the Release Page</h4>
+<p>
+              After tapping the latest release, you will be taken to
+              another screen showing the full release details of the
+              SK Kabunga-an Official App.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Check the App Version</h4>
+<p>
+              Confirm the version shown on the page and look for the
+              green <strong>Latest</strong> badge when available.
+              The version number may change when a newer app update is released.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Read the Release Information</h4>
+<p>
+              You can review the release description, highlights, and
+              other notes to see what is included in that version.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Continue to the Download File</h4>
+<p>
+              Stay on this release page and continue to the next guide
+              step, where we will show you where to find the Android
+              APK download file.
+            </p>
+</div>
+</div>
+</div>
+<div class="download-security-note">
+<strong>Check the Release Before Downloading</strong>
+        Make sure the release belongs to the official SKAppDev01 repository
+        and use the newest release marked <strong>Latest</strong> when one is available.
+      </div>
+</div>
+</div>
+</div><div aria-label="Download Guide navigation" class="guide-navigation">
+<button aria-label="Previous download guide step" class="guide-nav-button" disabled="" id="download-guide-prev" type="button">
+    ← Previous
+  </button>
+<div aria-live="polite" class="guide-progress" id="download-guide-progress">Step 1 of 3
+    <span class="guide-progress-title">Open the Official GitHub Download Page</span></div>
+<button aria-label="Next download guide step" class="guide-nav-button" id="download-guide-next" type="button">
+    Next →
+  </button>
+</div><div class="guide-coming-soon" id="download-guide-coming-soon">
+  More Download &amp; Installation steps will be added as we continue
+  documenting the installation process with screenshots.
+</div></div>
+<div aria-hidden="true" aria-labelledby="guide-category-account" class="guide-category-panel" data-category-panel="account" id="account-guide-panel" role="tabpanel">
+<!-- GUIDE 1: CREATE ACCOUNT -->
+<article aria-hidden="false" class="guide-slide active" data-title="Create Account">
+<div class="guide-feature">
+<div class="guide-feature-header">
+<span class="guide-label">Getting Started</span>
+<h3>Create an Account</h3>
+<p>
+              Create your local SK account before signing in
+              to the application.
+            </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an Official App Create Account screen" class="guide-image" src="account-creation.png"/>
+<p class="image-caption">
+                Create Account screen of the SK Kabunga-an Official App.
+              </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Enter a Username</h4>
+<p>
+                      Type the username you want to use for your
+                      local SK account. The username must contain
+                      at least 3 characters.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Create a Password</h4>
+<p>
+                      Enter a password with at least 6 characters.
+                      Choose a password that you can remember but
+                      that other people cannot easily guess.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Confirm Your Password</h4>
+<p>
+                      Enter the same password again in the Confirm
+                      Password field. Both password entries must match.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Choose a Recovery Question</h4>
+<p>
+                      Select a recovery question that you can answer
+                      later if you forget your password.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">5</div>
+<div class="step-content">
+<h4>Enter Your Recovery Answer</h4>
+<p>
+                      Type the answer to your selected recovery question.
+                      The recovery answer must contain at least 3 characters.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">6</div>
+<div class="step-content">
+<h4>Tap Create Account</h4>
+<p>
+                      Review your information, then tap Create Account.
+                      After the account is created successfully, continue
+                      to the login screen and sign in.
+                    </p>
+</div>
+</div>
+</div>
+<div class="guide-note">
+<strong>Account Recovery</strong>
+                Remember your recovery question and answer. You may
+                need them if you forget your password. Keep your account
+                credentials private.
+              </div>
+</div>
+</div>
+</div>
+</article>
+<!-- GUIDE 2: LOGIN / SIGN IN -->
+<article aria-hidden="true" class="guide-slide" data-title="Login / Sign In">
+<div class="guide-feature">
+<div class="guide-feature-header">
+<span class="guide-label">Getting Started</span>
+<h3>Sign In to Your Account</h3>
+<p>
+              Use the login screen to access your local
+              SK account on the device.
+            </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an Official App login screen" class="guide-image" src="login-guide.png"/>
+<p class="image-caption">
+                Login screen of the SK Kabunga-an Official App.
+              </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Enter a Username</h4>
+<p>
+                      Tap the Username field and enter the
+                      username you created for your local
+                      SK account.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Enter Your Password</h4>
+<p>
+                      Tap the Password field and enter your
+                      account password. Use the eye icon if
+                      you want to show or hide the password
+                      while typing.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Tap Sign In</h4>
+<p>
+                      After entering the correct username and
+                      password, tap the blue Sign In button to
+                      access the application.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Forgot Your Password?</h4>
+<p>
+                      If you cannot remember your password,
+                      tap Forgot password? and follow the
+                      account recovery process.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">5</div>
+<div class="step-content">
+<h4>Create an Account if Needed</h4>
+<p>
+                      If you do not have an account yet, tap
+                      Create account at the bottom of the login
+                      screen to begin account registration.
+                    </p>
+</div>
+</div>
+</div>
+<div class="guide-note">
+<strong>Offline Account</strong>
+                The login screen is for your local SK account.
+                Keep your username and password private and
+                protect access to the device where your records
+                are stored.
+              </div>
+</div>
+</div>
+</div>
+</article>
+<!-- GUIDE 3: COMPLETE PROFILE -->
+<article aria-hidden="true" class="guide-slide" data-title="Complete Profile">
+<div class="guide-feature">
+<div class="guide-feature-header">
+<span class="guide-label">Getting Started</span>
+<h3>Complete Your Profile</h3>
+<p>
+              After signing in, complete your profile and choose
+              how you will use the SK Kabunga-an app.
+            </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an Official App Complete Profile screen" class="guide-image" src="complete-profile.png"/>
+<p class="image-caption">
+                Complete Profile screen of the SK Kabunga-an Official App.
+              </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Confirm Your Account</h4>
+<p>
+                      Check the Account card at the top of the screen.
+                      It displays the username of the account currently
+                      being set up.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Enter Your Full Name</h4>
+<p>
+                      Tap the Full Name field and enter your complete
+                      name before continuing.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Choose an Account Type</h4>
+<p>
+                      Select SK Youth Member for youth-member access,
+                      or select SK Official if you are an authorized
+                      SK official.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>SK Official Verification</h4>
+<p>
+                      SK Official access requires verification. Official
+                      positions cannot be selected freely and verified
+                      authorization is required before access is granted.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">5</div>
+<div class="step-content">
+<h4>Tap Continue</h4>
+<p>
+                      After entering your full name and choosing the
+                      appropriate account type, tap the blue Continue
+                      button to proceed.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">6</div>
+<div class="step-content">
+<h4>Return to Sign In if Needed</h4>
+<p>
+                      Tap Back to Sign In if you need to return to the
+                      login screen before completing your profile.
+                    </p>
+</div>
+</div>
+</div>
+<div class="guide-note">
+<strong>Choose the Correct Account Type</strong>
+                Select the account type that matches how you will use
+                the app. SK Official access is protected by an
+                authorization and verification process.
+              </div>
+</div>
+</div>
+</div>
+</article>
+<!-- GUIDE 4: OFFICIAL VERIFICATION -->
+<article aria-hidden="true" class="guide-slide" data-title="Official Verification">
+<div class="guide-feature">
+<div class="guide-feature-header">
+<span class="guide-label">SK Official Access</span>
+<h3>Official Verification</h3>
+<p>
+              Complete Step 4 and Step 4.1 in sequence to establish
+              trusted SK Official access on the device.
+            </p>
+</div>
+<div class="verification-flow">
+<section class="verification-section" data-step="4">
+<div class="verification-section-header">
+<span class="verification-section-label">Step 4</span>
+<h4>Official Verification</h4>
+<p>
+                  Select your real SK position and continue to the trusted
+                  authorization process.
+                </p>
+</div>
+<div class="verification-grid">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an Official Verification screen" class="guide-image" src="official-verification.png"/>
+<p class="image-caption">
+                    Official Verification screen for SK Official access.
+                  </p>
+</div>
+<div class="verification-copy">
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Select Your Real SK Position</h4>
+<p>
+                          Choose the SK position that matches your actual
+                          official role before requesting authorization.
+                        </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Choose Founding Official Verification</h4>
+<p>
+                          For the first official deployment, choose Verify as
+                          Founding Official after selecting the correct position.
+                        </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Continue to Step 4.1</h4>
+<p>
+                          The next screen asks for the private Founding Official
+                          credential supplied by the developer.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="verification-divider">
+<span>Step 4.1</span>
+</div>
+<section class="verification-section" data-step="4.1" data-substep="4.1">
+<div class="verification-section-header">
+<span class="verification-section-label">Step 4.1</span>
+<h4>Founding Official Verification</h4>
+<p>
+                  Use the private deployment credential provided directly by
+                  the developer to establish the first trusted official.
+                </p>
+</div>
+<div class="verification-grid">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an Founding Official verification screen" class="guide-image" src="founding-official.png"/>
+<p class="image-caption">
+                    Founding Official screen for establishing the first
+                    verified SK official on the device.
+                  </p>
+</div>
+<div class="verification-copy">
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Confirm the Account and Position</h4>
+<p>
+                          Check that the account and the position shown after
+                          verification match the real SK official being registered.
+                        </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Get the Credential from the Developer</h4>
+<p>
+                          Contact the developer to receive the private Founding
+                          Official QR or authorization code for the one-time setup.
+                        </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Scan QR or Paste Authorization Code</h4>
+<p>
+                          Tap Scan Founding QR to scan the private credential,
+                          or tap Paste Authorization Code when it is supplied as text.
+                        </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Keep the Credential Private</h4>
+<p>
+                          Do not post the Founding Official credential in group
+                          chats, social media, or any other public location.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="authorization-sample">
+<h4>Sample Founding Official Authorization</h4>
+<div class="auth-sample-grid">
+<div class="sample-qr-box">
+<div aria-hidden="true" class="sample-qr-icon">▦</div>
+<strong>Sample Founding Official QR</strong>
+<span class="sample-only-badge">SAMPLE ONLY • NOT VALID</span>
+</div>
+<div class="sample-auth-text">
+<strong>Sample Authorization Text</strong>
+<code>FOUNDING-OFFICIAL-DEMO-ONLY</code>
+<span class="sample-only-badge">SAMPLE ONLY • NOT VALID</span>
+<p>
+                      A real authorization QR or text will be provided privately
+                      by the developer after contact and verification.
+                    </p>
+</div>
+</div>
+</div>
+<div class="guide-note">
+<strong>Keep the Real Authorization Private</strong>
+                Do not post or share the real Founding Official QR or
+                authorization text publicly. It is intended only for the
+                authorized registration process.
+              </div>
+</section>
+</div>
+</div>
+</article>
+<!-- GUIDE 5: ACCOUNT SETUP COMPLETE -->
+<article aria-hidden="true" class="guide-slide" data-title="Account Setup Complete">
+<div class="guide-feature">
+<div class="guide-feature-header">
+<span class="guide-label">Step 5</span>
+<h3>Account Setup Complete</h3>
+<p>
+              After the account creation process, profile setup, and any
+              required official verification are completed, the app opens
+              the main Home screen automatically.
+            </p>
+</div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="SK Kabunga-an app main Home screen after account setup" class="guide-image" src="app-main-screen.png"/>
+<p class="image-caption">
+                Main Home screen shown after the account setup process is complete.
+              </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Account Setup Is Complete</h4>
+<p>
+                      Once all required account setup steps are finished,
+                      the app automatically takes you to the main Home screen.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Start Exploring the App</h4>
+<p>
+                      You can now explore the available features such as
+                      Projects, Finance, Records, Activities, upcoming events,
+                      recent activity, and the other tools available to your account.
+                    </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>End of the Account Creation Guide</h4>
+<p>
+                      This completes the account creation and initial setup
+                      process. The remaining User Guide sections will explain
+                      the app features in more detail.
+                    </p>
+</div>
+</div>
+</div>
+<div class="guide-note">
+<strong>Feedback &amp; Bug Reports</strong>
+                If you find an app error, unexpected behavior, or bug while
+                using the SK Kabunga-an Official App, send feedback or report
+                the issue to the developer so it can be reviewed and fixed.
+              </div>
+</div>
+</div>
+</div>
+</article>
+<div aria-label="User Guide navigation" class="guide-navigation">
+<button aria-label="Previous user guide" class="guide-nav-button" disabled="" id="guide-prev" type="button">
+          ← Previous
+        </button>
+<div aria-live="polite" class="guide-progress" id="guide-progress">
+          Step 1 of 5
+          <span class="guide-progress-title">Create Account</span>
+</div>
+<button aria-label="Next user guide" class="guide-nav-button" id="guide-next" type="button">
+          Next →
+        </button>
+</div>
+<div class="guide-coming-soon">
+        More Account Creation topics will be added here
+        as we document the remaining onboarding and recovery features.
+      </div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-logos">
+<img alt="City of Baybay Logo" src="baybay-logo.png"/>
+<img alt="Barangay Kabunga-an Logo" src="barangay-kabunga-an-logo.png"/>
+<img alt="Sangguniang Kabataan Kabunga-an Logo" src="sk-kabunga-an-seal.png"/>
+<img alt="SK Kabunga-an Official App Logo" src="sk-kabunga-an-logo.png"/>
+</div>
+<div class="footer-title">
+      SK Kabunga-an Official App
+    </div>
+<div class="footer-subtitle">
+      Sangguniang Kabataan • Barangay Kabunga-an
+    </div>
+<div class="copyright">
+      © 2026 SK Kabunga-an. All rights reserved.
+    </div>
+</footer>
+<script>
+    (() => {
+      const categoryButtons = Array.from(
+        document.querySelectorAll(".guide-category-button")
+      );
+
+      const categoryPanels = Array.from(
+        document.querySelectorAll(".guide-category-panel")
+      );
+
+      function showGuideCategory(category) {
+        categoryButtons.forEach((button) => {
+          const active =
+            button.dataset.guideCategory === category;
+
+          button.classList.toggle("active", active);
+          button.setAttribute(
+            "aria-selected",
+            String(active)
+          );
+        });
+
+        categoryPanels.forEach((panel) => {
+          const active =
+            panel.dataset.categoryPanel === category;
+
+          panel.classList.toggle("active", active);
+          panel.setAttribute(
+            "aria-hidden",
+            String(!active)
+          );
+        });
+      }
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          showGuideCategory(
+            button.dataset.guideCategory
+          );
+        });
+      });
+
+      showGuideCategory("download");
+    })();
+  </script>
+<script>
+  (() => {
+    const slides = Array.from(
+      document.querySelectorAll(
+        "#download-guide-panel .download-guide-slide"
+      )
+    );
+
+    const prevButton =
+      document.getElementById("download-guide-prev");
+    const nextButton =
+      document.getElementById("download-guide-next");
+    const progress =
+      document.getElementById("download-guide-progress");
+
+    if (
+      !slides.length ||
+      !prevButton ||
+      !nextButton ||
+      !progress
+    ) {
+      return;
+    }
+
+    let currentStep = 0;
+
+    function showDownloadStep(index) {
+      currentStep = Math.max(
+        0,
+        Math.min(index, slides.length - 1)
+      );
+
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === currentStep;
+
+        slide.classList.toggle("active", active);
+        slide.setAttribute(
+          "aria-hidden",
+          String(!active)
+        );
+      });
+
+      prevButton.disabled = currentStep === 0;
+      nextButton.disabled =
+        currentStep === slides.length - 1;
+
+      const title =
+        slides[currentStep].dataset.title ||
+        "Download Guide";
+
+      progress.innerHTML =
+        "Step " +
+        (currentStep + 1) +
+        " of " +
+        slides.length +
+        '<span class="guide-progress-title">' +
+        title +
+        "</span>";
+    }
+
+    prevButton.addEventListener("click", () => {
+      showDownloadStep(currentStep - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+      showDownloadStep(currentStep + 1);
+    });
+
+    showDownloadStep(0);
+  })();
+</script>
+<script>
+    (function () {
+      const slides = Array.from(
+        document.querySelectorAll(
+          "#account-guide-panel .guide-slide"
+        )
+      );
+      const prevButton = document.getElementById("guide-prev");
+      const nextButton = document.getElementById("guide-next");
+      const progress = document.getElementById("guide-progress");
+      let currentGuide = 0;
+
+      function showGuide(index) {
+        if (!slides.length) return;
+
+        currentGuide = Math.max(0, Math.min(index, slides.length - 1));
+
+        slides.forEach((slide, slideIndex) => {
+          const active = slideIndex === currentGuide;
+          slide.classList.toggle("active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+
+        prevButton.disabled = currentGuide === 0;
+        nextButton.disabled = currentGuide === slides.length - 1;
+
+        const title = slides[currentGuide].dataset.title || "User Guide";
+        progress.innerHTML =
+          "Step " + (currentGuide + 1) + " of " + slides.length +
+          '<span class="guide-progress-title">' + title + "</span>";
+      }
+
+      prevButton.addEventListener("click", function () {
+        showGuide(currentGuide - 1);
+      });
+
+      nextButton.addEventListener("click", function () {
+        showGuide(currentGuide + 1);
+      });
+
+      showGuide(0);
+    })();
+  </script>
+<script>
+    (() => {
+      const header = document.querySelector("header");
+
+      if (!header) return;
+
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      const hideThreshold = 110;
+      const scrollDelta = 8;
+
+      function updateHeader() {
+        const currentScrollY = window.scrollY;
+        const difference = currentScrollY - lastScrollY;
+
+        if (currentScrollY <= 20) {
+          header.classList.remove("header-hidden");
+        } else if (
+          currentScrollY > hideThreshold &&
+          difference > scrollDelta
+        ) {
+          header.classList.add("header-hidden");
+        } else if (difference < -scrollDelta) {
+          header.classList.remove("header-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+          }
+        },
+        { passive: true }
+      );
+    })();
+  </script>
+</body>
+</html>
