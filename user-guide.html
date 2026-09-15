@@ -1188,6 +1188,23 @@
       transform: translateY(-1px);
       box-shadow: 0 6px 18px rgba(11, 79, 168, 0.12);
     }
+
+
+    nav a.active-page {
+      color: #ffd21f;
+      position: relative;
+    }
+
+    nav a.active-page::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      border-radius: 999px;
+      background: #ffd21f;
+    }
 </style>
 </head>
 <body>
@@ -1198,19 +1215,15 @@
 <span>SK Kabunga-an</span>
 </div>
 <nav>
-<a href="index.html#home">Home</a>
-<a href="index.html#logos">Logos</a>
-<a href="index.html#about">About</a>
-<a href="index.html#features">Features</a>
-<a href="user-guide.html">User Guide</a>
-<a href="index.html#privacy">Privacy</a>
+<a href="index.html">Home</a>
+<a href="logos.html">Logos</a>
+<a href="about.html">About</a>
+<a href="features.html">Features</a>
+<a aria-current="page" class="active-page" href="user-guide.html">User Guide</a>
+<a href="privacy.html">Privacy</a>
 </nav>
 </div>
 </header>
-
-
-
-
 <section class="guide-section" id="guide">
 <div class="container"><a aria-label="Back to website home page" class="guide-back-home" href="index.html" id="guide-back-home">
           ← Back to Home
@@ -1957,7 +1970,6 @@
 </div>
 </div>
 </section>
-
 <footer>
 <div class="footer-logos">
 <img alt="City of Baybay Logo" src="baybay-logo.png"/>
