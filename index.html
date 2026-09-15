@@ -348,6 +348,110 @@
       background: #eef5ff;
     }
 
+
+    /* USER GUIDE CATEGORIES */
+
+    .guide-category-switcher {
+      max-width: 1000px;
+      margin: 0 auto 24px;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      background: #dbeafe;
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+    }
+
+    .guide-category-button {
+      border: 0;
+      border-radius: 11px;
+      padding: 13px 14px;
+      background: transparent;
+      color: #0b4fa8;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .guide-category-button:hover,
+    .guide-category-button:focus {
+      transform: translateY(-1px);
+    }
+
+    .guide-category-button.active {
+      background: #0b4fa8;
+      color: white;
+      box-shadow: 0 4px 14px rgba(11, 79, 168, 0.18);
+    }
+
+    .guide-category-panel {
+      display: none;
+    }
+
+    .guide-category-panel.active {
+      display: block;
+    }
+
+    .download-guide-visual {
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 16px;
+      background:
+        linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.18);
+    }
+
+    .download-guide-icon {
+      width: 86px;
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 22px;
+      background: white;
+      color: #0f172a;
+      font-size: 44px;
+      font-weight: 900;
+    }
+
+    .download-guide-visual strong {
+      font-size: 20px;
+    }
+
+    .download-guide-visual span {
+      max-width: 270px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .download-security-note {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
+
+    .download-security-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #047857;
+    }
+
     .guide-feature {
       max-width: 1000px;
       margin: auto;
@@ -966,6 +1070,11 @@
       }
 
 
+
+      .guide-category-switcher {
+        grid-template-columns: 1fr;
+      }
+
       .guide-navigation {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
@@ -1224,6 +1333,156 @@
           SK Kabunga-an Official App.
         </p>
       </div>
+
+
+      <div
+        class="guide-category-switcher"
+        role="tablist"
+        aria-label="User Guide categories"
+      >
+        <button
+          type="button"
+          class="guide-category-button active"
+          id="guide-category-download"
+          data-guide-category="download"
+          role="tab"
+          aria-selected="true"
+          aria-controls="download-guide-panel"
+        >
+          Download &amp; Installation
+        </button>
+
+        <button
+          type="button"
+          class="guide-category-button"
+          id="guide-category-account"
+          data-guide-category="account"
+          role="tab"
+          aria-selected="false"
+          aria-controls="account-guide-panel"
+        >
+          Account Creation
+        </button>
+      </div>
+
+      <div
+        class="guide-category-panel active"
+        id="download-guide-panel"
+        data-category-panel="download"
+        role="tabpanel"
+        aria-labelledby="guide-category-download"
+      >
+        <div class="guide-feature">
+          <div class="guide-feature-header">
+            <span class="guide-label">Download Guide</span>
+            <h3>Download &amp; Install the App from GitHub</h3>
+            <p>
+              Follow these steps to get the official SK Kabunga-an
+              Android app from the GitHub download page provided by
+              the developer.
+            </p>
+          </div>
+
+          <div class="guide-layout">
+            <div class="guide-image-card">
+              <div class="download-guide-visual" aria-label="GitHub app download guide">
+                <div class="download-guide-icon">↓</div>
+                <strong>Official GitHub Download</strong>
+                <span>
+                  Use only the official GitHub repository, Release,
+                  or direct APK link provided by the developer.
+                </span>
+              </div>
+              <p class="image-caption">
+                The exact GitHub screenshots can be added to this
+                guide as we document the download process.
+              </p>
+            </div>
+
+            <div>
+              <div class="guide-steps">
+                <div class="guide-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Open the Official GitHub Download Page</h4>
+                    <p>
+                      Open the official GitHub link provided by the
+                      developer. If the repository page opens first,
+                      use the Release or APK download area indicated
+                      by the developer.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Download the APK File</h4>
+                    <p>
+                      Tap the Android APK file for the current app
+                      version, then confirm the download when your
+                      browser asks for permission.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Open the Downloaded APK</h4>
+                    <p>
+                      After the download finishes, open the APK from
+                      the browser notification or your Downloads folder.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h4>Allow Installation if Android Requests It</h4>
+                    <p>
+                      Android may ask you to allow installation from
+                      the browser or file manager you used. Enable the
+                      permission for that source only when needed for
+                      this official APK.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="guide-step">
+                  <div class="step-number">5</div>
+                  <div class="step-content">
+                    <h4>Install and Open the App</h4>
+                    <p>
+                      Tap Install. When installation is complete,
+                      tap Open to start the SK Kabunga-an Official App.
+                      You can then continue to the separate Account
+                      Creation guide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="download-security-note">
+                <strong>Download Safely</strong>
+                Download the APK only from the official GitHub link
+                shared by the developer. Avoid unofficial mirrors,
+                modified APKs, or download links from unknown sources.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="guide-category-panel"
+        id="account-guide-panel"
+        data-category-panel="account"
+        role="tabpanel"
+        aria-labelledby="guide-category-account"
+        aria-hidden="true"
+      >
 
       <!-- GUIDE 1: CREATE ACCOUNT -->
       <article
@@ -1868,7 +2127,7 @@
         </button>
 
         <div class="guide-progress" id="guide-progress" aria-live="polite">
-          Guide 1 of 5
+          Step 1 of 5
           <span class="guide-progress-title">Create Account</span>
         </div>
 
@@ -1883,8 +2142,10 @@
       </div>
 
       <div class="guide-coming-soon">
-        More user guide topics will be added to this sequence
-        as we document the remaining app features.
+        More Account Creation topics will be added here
+        as we document the remaining onboarding and recovery features.
+      </div>
+
       </div>
     </div>
   </section>
@@ -1956,9 +2217,60 @@
   </footer>
 
 
+
+  <script>
+    (() => {
+      const categoryButtons = Array.from(
+        document.querySelectorAll(".guide-category-button")
+      );
+
+      const categoryPanels = Array.from(
+        document.querySelectorAll(".guide-category-panel")
+      );
+
+      function showGuideCategory(category) {
+        categoryButtons.forEach((button) => {
+          const active =
+            button.dataset.guideCategory === category;
+
+          button.classList.toggle("active", active);
+          button.setAttribute(
+            "aria-selected",
+            String(active)
+          );
+        });
+
+        categoryPanels.forEach((panel) => {
+          const active =
+            panel.dataset.categoryPanel === category;
+
+          panel.classList.toggle("active", active);
+          panel.setAttribute(
+            "aria-hidden",
+            String(!active)
+          );
+        });
+      }
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          showGuideCategory(
+            button.dataset.guideCategory
+          );
+        });
+      });
+
+      showGuideCategory("download");
+    })();
+  </script>
+
   <script>
     (function () {
-      const slides = Array.from(document.querySelectorAll(".guide-slide"));
+      const slides = Array.from(
+        document.querySelectorAll(
+          "#account-guide-panel .guide-slide"
+        )
+      );
       const prevButton = document.getElementById("guide-prev");
       const nextButton = document.getElementById("guide-next");
       const progress = document.getElementById("guide-progress");
@@ -1980,7 +2292,7 @@
 
         const title = slides[currentGuide].dataset.title || "User Guide";
         progress.innerHTML =
-          "Guide " + (currentGuide + 1) + " of " + slides.length +
+          "Step " + (currentGuide + 1) + " of " + slides.length +
           '<span class="guide-progress-title">' + title + "</span>";
       }
 
