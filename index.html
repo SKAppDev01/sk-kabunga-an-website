@@ -829,6 +829,15 @@
       font-size: 14px;
     }
 
+
+    .download-guide-slide {
+      display: none;
+    }
+
+    .download-guide-slide.active {
+      display: block;
+    }
+
     .guide-slide {
       display: none;
     }
@@ -876,11 +885,13 @@
       opacity: 0.75;
     }
 
-    #guide-prev {
+    #guide-prev,
+    #download-guide-prev {
       justify-self: start;
     }
 
-    #guide-next {
+    #guide-next,
+    #download-guide-next {
       justify-self: end;
     }
 
@@ -1324,7 +1335,7 @@
         </button>
 </div>
 <div aria-labelledby="guide-category-download" class="guide-category-panel active" data-category-panel="download" id="download-guide-panel" role="tabpanel">
-<div class="guide-feature" data-download-step="1">
+<div aria-hidden="false" class="guide-feature download-guide-slide active" data-download-step="1" data-title="Open the Official GitHub Download Page">
 <div class="guide-feature-header">
 <span class="guide-label">Download Guide · Step 1</span>
 <h3>Open the Official GitHub Download Page</h3>
@@ -1378,9 +1389,7 @@
 </div>
 </div>
 </div>
-<div aria-hidden="true" class="guide-sequence-divider">
-<span>Step 2</span>
-</div><div class="guide-feature" data-download-step="2">
+<div aria-hidden="true" class="guide-feature download-guide-slide" data-download-step="2" data-title="Find the Latest Release">
 <div class="guide-feature-header">
 <span class="guide-label">Download Guide · Step 2</span>
 <h3>Scroll Down and Find the Latest Release</h3>
@@ -1449,6 +1458,20 @@
       </div>
 </div>
 </div>
+</div><div aria-label="Download Guide navigation" class="guide-navigation">
+<button aria-label="Previous download guide step" class="guide-nav-button" disabled="" id="download-guide-prev" type="button">
+    ← Previous
+  </button>
+<div aria-live="polite" class="guide-progress" id="download-guide-progress">
+    Step 1 of 2
+    <span class="guide-progress-title">Open the Official GitHub Download Page</span>
+</div>
+<button aria-label="Next download guide step" class="guide-nav-button" id="download-guide-next" type="button">
+    Next →
+  </button>
+</div><div class="guide-coming-soon" id="download-guide-coming-soon">
+  More Download &amp; Installation steps will be added as we continue
+  documenting the installation process with screenshots.
 </div></div>
 <div aria-hidden="true" aria-labelledby="guide-category-account" class="guide-category-panel" data-category-panel="account" id="account-guide-panel" role="tabpanel">
 <!-- GUIDE 1: CREATE ACCOUNT -->
@@ -2058,6 +2081,79 @@
       showGuideCategory("download");
     })();
   </script>
+
+<script>
+  (() => {
+    const slides = Array.from(
+      document.querySelectorAll(
+        "#download-guide-panel .download-guide-slide"
+      )
+    );
+
+    const prevButton =
+      document.getElementById("download-guide-prev");
+    const nextButton =
+      document.getElementById("download-guide-next");
+    const progress =
+      document.getElementById("download-guide-progress");
+
+    if (
+      !slides.length ||
+      !prevButton ||
+      !nextButton ||
+      !progress
+    ) {
+      return;
+    }
+
+    let currentStep = 0;
+
+    function showDownloadStep(index) {
+      currentStep = Math.max(
+        0,
+        Math.min(index, slides.length - 1)
+      );
+
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === currentStep;
+
+        slide.classList.toggle("active", active);
+        slide.setAttribute(
+          "aria-hidden",
+          String(!active)
+        );
+      });
+
+      prevButton.disabled = currentStep === 0;
+      nextButton.disabled =
+        currentStep === slides.length - 1;
+
+      const title =
+        slides[currentStep].dataset.title ||
+        "Download Guide";
+
+      progress.innerHTML =
+        "Step " +
+        (currentStep + 1) +
+        " of " +
+        slides.length +
+        '<span class="guide-progress-title">' +
+        title +
+        "</span>";
+    }
+
+    prevButton.addEventListener("click", () => {
+      showDownloadStep(currentStep - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+      showDownloadStep(currentStep + 1);
+    });
+
+    showDownloadStep(0);
+  })();
+</script>
+
 <script>
     (function () {
       const slides = Array.from(
