@@ -33,11 +33,7 @@
     }
 
     body {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       background: #f5f8fc;
       color: #1f2937;
       line-height: 1.6;
@@ -48,7 +44,31 @@
     }
 
     section {
+      padding: 65px 20px;
       scroll-margin-top: 120px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      color: #1266b5;
+      font-size: 31px;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      font-size: 17px;
     }
 
 
@@ -60,10 +80,8 @@
     header {
       background: #0b3b7e;
       color: white;
-
       position: sticky;
       top: 0;
-
       z-index: 1000;
 
       box-shadow:
@@ -73,7 +91,6 @@
 
     .header-container {
       max-width: 1100px;
-
       margin: auto;
 
       padding:
@@ -83,7 +100,6 @@
 
       display: flex;
       flex-direction: column;
-
       align-items: center;
 
       gap: 13px;
@@ -91,9 +107,7 @@
 
     .brand {
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       gap: 12px;
@@ -101,7 +115,6 @@
       color: white;
 
       font-size: 21px;
-
       font-weight: 700;
     }
 
@@ -110,11 +123,9 @@
       height: 52px;
 
       object-fit: contain;
-
       border-radius: 50%;
 
       background: white;
-
       padding: 2px;
 
       border:
@@ -132,10 +143,8 @@
       width: 100%;
 
       display: flex;
-
-      align-items: center;
-
       justify-content: center;
+      align-items: center;
 
       flex-wrap: wrap;
 
@@ -148,16 +157,12 @@
 
     nav a {
       color: white;
-
       text-decoration: none;
 
       font-size: 15px;
-
       font-weight: 600;
 
-      padding:
-        5px
-        1px;
+      padding: 5px 1px;
 
       transition: 0.2s ease;
     }
@@ -182,7 +187,6 @@
         );
 
       color: white;
-
       text-align: center;
 
       padding:
@@ -191,7 +195,6 @@
         80px;
 
       position: relative;
-
       overflow: hidden;
     }
 
@@ -206,12 +209,7 @@
       border-radius: 50%;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.05
-        );
+        rgba(255, 255, 255, 0.05);
 
       top: -130px;
       right: -130px;
@@ -228,12 +226,7 @@
       border-radius: 50%;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.04
-        );
+        rgba(255, 255, 255, 0.04);
 
       bottom: -130px;
       left: -110px;
@@ -241,17 +234,14 @@
 
     .hero-content {
       max-width: 850px;
-
       margin: auto;
 
       position: relative;
-
       z-index: 2;
     }
 
     .hero-logo {
       width: 180px;
-
       margin-bottom: 22px;
 
       object-fit: contain;
@@ -265,9 +255,7 @@
 
     .hero h1 {
       font-size: 42px;
-
       line-height: 1.2;
-
       margin-bottom: 13px;
     }
 
@@ -275,7 +263,6 @@
       color: #ffd21f;
 
       font-size: 18px;
-
       font-weight: 700;
 
       margin-bottom: 17px;
@@ -290,7 +277,6 @@
         30px;
 
       color: #edf6ff;
-
       font-size: 17px;
     }
 
@@ -302,7 +288,6 @@
 
     .button-group {
       display: flex;
-
       justify-content: center;
 
       flex-wrap: wrap;
@@ -320,11 +305,9 @@
       border-radius: 10px;
 
       background: white;
-
       color: #0b4fa8;
 
       font-weight: 700;
-
       text-decoration: none;
 
       transition:
@@ -333,63 +316,16 @@
     }
 
     .button:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
     }
 
     .button-outline {
       color: white;
-
       background: transparent;
 
       border:
         2px solid
         white;
-    }
-
-
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================== */
-
-    section {
-      padding:
-        65px
-        20px;
-    }
-
-    .container {
-      max-width: 1100px;
-
-      margin: auto;
-    }
-
-    .section-title {
-      max-width: 720px;
-
-      margin:
-        0
-        auto
-        42px;
-
-      text-align: center;
-    }
-
-    .section-title h2 {
-      color: #1266b5;
-
-      font-size: 31px;
-
-      line-height: 1.25;
-
-      margin-bottom: 14px;
-    }
-
-    .section-title p {
-      color: #64748b;
-
-      font-size: 17px;
     }
 
 
@@ -404,16 +340,12 @@
 
     .logo-grid {
       max-width: 760px;
-
       margin: auto;
 
       display: grid;
 
       grid-template-columns:
-        repeat(
-          4,
-          1fr
-        );
+        repeat(4, 1fr);
 
       gap: 28px;
 
@@ -422,9 +354,7 @@
 
     .logo-item {
       display: flex;
-
       justify-content: center;
-
       align-items: center;
     }
 
@@ -439,9 +369,7 @@
       padding: 6px;
 
       display: flex;
-
       justify-content: center;
-
       align-items: center;
 
       overflow: hidden;
@@ -452,12 +380,7 @@
 
       box-shadow:
         0 5px 22px
-        rgba(
-          11,
-          79,
-          168,
-          0.16
-        );
+        rgba(11, 79, 168, 0.16);
     }
 
     .logo-card img {
@@ -481,7 +404,6 @@
 
     .about-card {
       max-width: 900px;
-
       margin: auto;
 
       background: white;
@@ -496,19 +418,12 @@
 
       box-shadow:
         0 5px 20px
-        rgba(
-          15,
-          23,
-          42,
-          0.08
-        );
+        rgba(15, 23, 42, 0.08);
     }
 
     .about-card p {
       color: #475569;
-
       font-size: 16px;
-
       text-align: justify;
     }
 
@@ -530,10 +445,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
+        repeat(3, 1fr);
 
       gap: 20px;
     }
@@ -551,12 +463,7 @@
 
       box-shadow:
         0 5px 20px
-        rgba(
-          15,
-          23,
-          42,
-          0.08
-        );
+        rgba(15, 23, 42, 0.08);
 
       transition:
         transform
@@ -564,8 +471,7 @@
     }
 
     .card:hover {
-      transform:
-        translateY(-3px);
+      transform: translateY(-3px);
     }
 
     .card h3 {
@@ -578,7 +484,6 @@
 
     .card p {
       color: #64748b;
-
       font-size: 15px;
     }
 
@@ -592,70 +497,246 @@
       background: #eef5ff;
     }
 
-    .guide-box {
+    .guide-intro {
       max-width: 850px;
 
-      margin: auto;
+      margin:
+        0
+        auto
+        35px;
 
-      padding: 38px 28px;
-
-      text-align: center;
-
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff,
-          #f2f7ff
-        );
+      background: white;
 
       border:
         1px solid
         #dbeafe;
 
+      border-radius: 16px;
+
+      padding: 24px;
+
+      text-align: center;
+
       box-shadow:
         0 5px 20px
-        rgba(
-          11,
-          79,
-          168,
-          0.09
-        );
+        rgba(11, 79, 168, 0.08);
     }
 
-    .guide-box h3 {
+    .guide-intro h3 {
       color: #082f6b;
 
-      font-size: 23px;
+      font-size: 22px;
+
+      margin-bottom: 8px;
+    }
+
+    .guide-intro p {
+      color: #64748b;
+    }
+
+
+
+    /* ACCOUNT CREATION GUIDE */
+
+    .guide-feature {
+      max-width: 1000px;
+      margin: auto;
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 30px;
+
+      box-shadow:
+        0 8px 28px
+        rgba(15, 23, 42, 0.09);
+    }
+
+    .guide-feature-header {
+      margin-bottom: 28px;
+
+      padding-bottom: 18px;
+
+      border-bottom:
+        1px solid
+        #e2e8f0;
+    }
+
+    .guide-label {
+      display: inline-block;
+
+      background: #dbeafe;
+      color: #0b4fa8;
+
+      padding:
+        6px
+        13px;
+
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 700;
 
       margin-bottom: 12px;
     }
 
-    .guide-box p {
-      max-width: 650px;
+    .guide-feature-header h3 {
+      color: #082f6b;
 
-      margin: auto;
+      font-size: 28px;
 
-      color: #64748b;
+      margin-bottom: 8px;
     }
 
-    .coming-soon {
-      display: inline-block;
+    .guide-feature-header p {
+      color: #64748b;
+      font-size: 16px;
+    }
 
-      margin-top: 23px;
+    .guide-layout {
+      display: grid;
 
-      padding:
-        9px
-        17px;
+      grid-template-columns:
+        minmax(260px, 390px)
+        1fr;
 
-      border-radius: 30px;
+      gap: 34px;
 
-      background: #dbeafe;
+      align-items: start;
+    }
 
-      color: #0b4fa8;
 
+
+    /* SCREENSHOT */
+
+    .guide-image-card {
+      background:
+        linear-gradient(
+          145deg,
+          #e8f2ff,
+          #f8fbff
+        );
+
+      padding: 18px;
+
+      border-radius: 20px;
+
+      border:
+        1px solid
+        #dbeafe;
+
+      position: sticky;
+      top: 145px;
+    }
+
+    .guide-image {
+      display: block;
+
+      width: 100%;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.16);
+    }
+
+    .image-caption {
+      color: #64748b;
+
+      font-size: 13px;
+
+      text-align: center;
+
+      margin-top: 12px;
+    }
+
+
+
+    /* STEPS */
+
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+
+      gap: 15px;
+    }
+
+    .guide-step {
+      display: flex;
+
+      gap: 15px;
+
+      padding: 18px;
+
+      background: #f8fafc;
+
+      border:
+        1px solid
+        #e2e8f0;
+
+      border-radius: 14px;
+    }
+
+    .step-number {
+      min-width: 38px;
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #1266b5;
+      color: white;
+
+      font-size: 16px;
       font-weight: 700;
+    }
+
+    .step-content h4 {
+      color: #0b3b7e;
+
+      font-size: 17px;
+
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      color: #475569;
+
+      font-size: 15px;
+    }
+
+
+
+    /* IMPORTANT NOTE */
+
+    .guide-note {
+      margin-top: 20px;
+
+      padding: 18px;
+
+      border-radius: 14px;
+
+      background: #fff8df;
+
+      border:
+        1px solid
+        #fde68a;
+
+      color: #713f12;
+    }
+
+    .guide-note strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #92400e;
     }
 
 
@@ -691,7 +772,6 @@
       display: flex;
 
       justify-content: center;
-
       align-items: center;
 
       flex-wrap: wrap;
@@ -715,19 +795,13 @@
 
       border:
         2px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.9
-        );
+        rgba(255, 255, 255, 0.9);
     }
 
     .footer-title {
       color: white;
 
       font-size: 19px;
-
       font-weight: 700;
 
       margin-bottom: 3px;
@@ -735,13 +809,11 @@
 
     .footer-subtitle {
       margin-bottom: 18px;
-
       font-size: 14px;
     }
 
     .copyright {
       color: #94a3b8;
-
       font-size: 13px;
     }
 
@@ -756,22 +828,28 @@
 
       .cards {
         grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+          repeat(2, 1fr);
       }
 
       .logo-grid {
         grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+          repeat(2, 1fr);
 
         max-width: 430px;
 
         gap: 30px;
+      }
+
+      .guide-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-image-card {
+        position: static;
+
+        max-width: 430px;
+
+        margin: auto;
       }
 
     }
@@ -837,7 +915,7 @@
       section {
         padding:
           55px
-          20px;
+          16px;
       }
 
       .section-title h2 {
@@ -845,16 +923,12 @@
       }
 
       .cards {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .logo-grid {
         grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+          repeat(2, 1fr);
 
         gap:
           28px
@@ -867,7 +941,32 @@
       }
 
       .about-card {
-        padding: 25px 22px;
+        padding:
+          25px
+          22px;
+      }
+
+      .guide-feature {
+        padding:
+          22px
+          16px;
+      }
+
+      .guide-feature-header h3 {
+        font-size: 25px;
+      }
+
+      .guide-step {
+        padding: 15px;
+      }
+
+      .step-number {
+        min-width: 34px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
       }
 
     }
@@ -900,6 +999,16 @@
         height: 110px;
       }
 
+      .guide-feature {
+        padding:
+          20px
+          13px;
+      }
+
+      .guide-step {
+        gap: 11px;
+      }
+
     }
 
   </style>
@@ -908,6 +1017,7 @@
 
 
 <body>
+
 
 
   <!-- =========================
@@ -1061,8 +1171,6 @@
       <div class="logo-grid">
 
 
-        <!-- BAYBAY -->
-
         <div class="logo-item">
 
           <div class="logo-card">
@@ -1077,8 +1185,6 @@
         </div>
 
 
-
-        <!-- BARANGAY KABUNGA-AN -->
 
         <div class="logo-item">
 
@@ -1095,8 +1201,6 @@
 
 
 
-        <!-- SANGGUNIANG KABATAAN -->
-
         <div class="logo-item">
 
           <div class="logo-card">
@@ -1111,8 +1215,6 @@
         </div>
 
 
-
-        <!-- OFFICIAL APP -->
 
         <div class="logo-item">
 
@@ -1321,149 +1423,4 @@
 
 
 
-        <div class="card">
-
-          <h3>
-            Inventory
-          </h3>
-
-          <p>
-            Manage SK equipment,
-            supplies, and inventory
-            records.
-          </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-          <h3>
-            Documents
-          </h3>
-
-          <p>
-            Organize important SK
-            documents and records.
-          </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-          <h3>
-            Data Management
-          </h3>
-
-          <p>
-            Backup, import, transfer,
-            and manage application data.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       USER GUIDE
-  ========================== -->
-
-  <section
-    class="guide-section"
-    id="guide"
-  >
-
-    <div class="container">
-
-
-      <div class="section-title">
-
-        <h2>
-          User Guide
-        </h2>
-
-        <p>
-          Learn how to use each part
-          of the SK Kabunga-an Official App.
-        </p>
-
-      </div>
-
-
-
-      <div class="guide-box">
-
-        <h3>
-          Step-by-Step App Instructions
-        </h3>
-
-        <p>
-
-          This section will contain screenshots
-          and detailed instructions showing
-          SK officials how to use each feature
-          of the application.
-
-        </p>
-
-
-        <span class="coming-soon">
-          User Guide Coming Soon
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       PRIVACY
-  ========================== -->
-
-  <section
-    class="privacy-section"
-    id="privacy"
-  >
-
-    <div class="container">
-
-
-      <div class="section-title">
-
-        <h2>
-          Privacy &amp; Data
-        </h2>
-
-        <p>
-          Protecting SK and youth information
-          is an important part of the application.
-        </p>
-
-      </div>
-
-
-
-      <div class="about-card">
-
-        <p>
-
-          The SK Kabunga-an Official App
-          is designed primarily as an
-          offline application.
-
-          Information stored in the app
-          remains on authorized devices
-          unless an a
+        <div cl
