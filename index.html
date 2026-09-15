@@ -348,6 +348,32 @@
     }
 
 
+
+    .guide-sequence-divider {
+      max-width: 1000px;
+      margin: 34px auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #0b4fa8;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .guide-sequence-divider::before,
+    .guide-sequence-divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: #bfdbfe;
+    }
+
+    .guide-sequence-divider span {
+      white-space: nowrap;
+    }
+
     /* USER GUIDE CATEGORIES */
 
     .guide-category-switcher {
@@ -1298,7 +1324,7 @@
         </button>
 </div>
 <div aria-labelledby="guide-category-download" class="guide-category-panel active" data-category-panel="download" id="download-guide-panel" role="tabpanel">
-<div class="guide-feature">
+<div class="guide-feature" data-download-step="1">
 <div class="guide-feature-header">
 <span class="guide-label">Download Guide · Step 1</span>
 <h3>Open the Official GitHub Download Page</h3>
@@ -1352,7 +1378,78 @@
 </div>
 </div>
 </div>
+<div aria-hidden="true" class="guide-sequence-divider">
+<span>Step 2</span>
+</div><div class="guide-feature" data-download-step="2">
+<div class="guide-feature-header">
+<span class="guide-label">Download Guide · Step 2</span>
+<h3>Scroll Down and Find the Latest Release</h3>
+<p>
+      You do not need to create or sign in to a GitHub account to download
+      the app. From the repository page, simply scroll down until you reach
+      the <strong>Releases</strong> section.
+    </p>
 </div>
+<div class="guide-layout">
+<div class="guide-image-card">
+<img alt="GitHub repository page showing the Releases section with the latest SK Kabunga-an Official App release" class="guide-image" src="download-step-2.png"/>
+<p class="image-caption">
+        Scroll toward the bottom of the repository page until the Releases
+        section appears.
+      </p>
+</div>
+<div>
+<div class="guide-steps">
+<div class="guide-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>No GitHub Account Is Needed</h4>
+<p>
+              The repository is public, so you can download the app without
+              creating a GitHub account or signing in.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Scroll Down the Repository Page</h4>
+<p>
+              Keep scrolling toward the bottom of the page until you see the
+              section labeled <strong>Releases</strong>.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Look for the Latest Release</h4>
+<p>
+              Find the release with the green <strong>Latest</strong> badge.
+              The version number may change whenever a newer version of the
+              app is published.
+            </p>
+</div>
+</div>
+<div class="guide-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Open the Release</h4>
+<p>
+              Tap the latest SK Kabunga-an Official App release to continue
+              to the next download step.
+            </p>
+</div>
+</div>
+</div>
+<div class="download-security-note">
+<strong>Tip</strong>
+        If you see a newer version than the one shown in this screenshot,
+        use the release marked <strong>Latest</strong>.
+      </div>
+</div>
+</div>
+</div></div>
 <div aria-hidden="true" aria-labelledby="guide-category-account" class="guide-category-panel" data-category-panel="account" id="account-guide-panel" role="tabpanel">
 <!-- GUIDE 1: CREATE ACCOUNT -->
 <article aria-hidden="false" class="guide-slide active" data-title="Create Account">
