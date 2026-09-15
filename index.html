@@ -17,7 +17,6 @@
   <title>SK Kabunga-an Official App</title>
 
   <style>
-
     /* =========================
        GLOBAL
     ========================== */
@@ -71,8 +70,6 @@
       font-size: 17px;
     }
 
-
-
     /* =========================
        HEADER
     ========================== */
@@ -83,25 +80,16 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-
-      box-shadow:
-        0 4px 15px
-        rgba(0, 0, 0, 0.18);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
     }
 
     .header-container {
       max-width: 1100px;
       margin: auto;
-
-      padding:
-        14px
-        20px
-        10px;
-
+      padding: 14px 20px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-
       gap: 13px;
     }
 
@@ -109,11 +97,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
       gap: 12px;
-
       color: white;
-
       font-size: 21px;
       font-weight: 700;
     }
@@ -121,19 +106,12 @@
     .brand img {
       width: 52px;
       height: 52px;
-
       object-fit: contain;
       border-radius: 50%;
-
       background: white;
       padding: 2px;
-
-      border:
-        2px solid
-        rgba(255, 255, 255, 0.85);
+      border: 2px solid rgba(255, 255, 255, 0.85);
     }
-
-
 
     /* =========================
        NAVIGATION
@@ -141,37 +119,27 @@
 
     nav {
       width: 100%;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       flex-wrap: wrap;
-
-      gap:
-        6px
-        20px;
-
+      gap: 6px 20px;
       padding-bottom: 7px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-
       font-size: 15px;
       font-weight: 600;
-
       padding: 5px 1px;
-
       transition: 0.2s ease;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus {
       color: #ffd21f;
     }
-
-
 
     /* =========================
        HERO
@@ -185,49 +153,31 @@
           #0b4fa8 48%,
           #1677e8 100%
         );
-
       color: white;
       text-align: center;
-
-      padding:
-        65px
-        20px
-        80px;
-
+      padding: 65px 20px 80px;
       position: relative;
       overflow: hidden;
     }
 
     .hero::before {
       content: "";
-
       position: absolute;
-
       width: 330px;
       height: 330px;
-
       border-radius: 50%;
-
-      background:
-        rgba(255, 255, 255, 0.05);
-
+      background: rgba(255, 255, 255, 0.05);
       top: -130px;
       right: -130px;
     }
 
     .hero::after {
       content: "";
-
       position: absolute;
-
       width: 250px;
       height: 250px;
-
       border-radius: 50%;
-
-      background:
-        rgba(255, 255, 255, 0.04);
-
+      background: rgba(255, 255, 255, 0.04);
       bottom: -130px;
       left: -110px;
     }
@@ -235,7 +185,6 @@
     .hero-content {
       max-width: 850px;
       margin: auto;
-
       position: relative;
       z-index: 2;
     }
@@ -243,14 +192,8 @@
     .hero-logo {
       width: 180px;
       margin-bottom: 22px;
-
       object-fit: contain;
-
-      filter:
-        drop-shadow(
-          0 8px 20px
-          rgba(0, 0, 0, 0.3)
-        );
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
     }
 
     .hero h1 {
@@ -261,26 +204,17 @@
 
     .hero-subtitle {
       color: #ffd21f;
-
       font-size: 18px;
       font-weight: 700;
-
       margin-bottom: 17px;
     }
 
     .hero-description {
       max-width: 720px;
-
-      margin:
-        0
-        auto
-        30px;
-
+      margin: 0 auto 30px;
       color: #edf6ff;
       font-size: 17px;
     }
-
-
 
     /* =========================
        BUTTONS
@@ -289,46 +223,31 @@
     .button-group {
       display: flex;
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
     .button {
       display: inline-block;
-
-      padding:
-        13px
-        23px;
-
+      padding: 13px 23px;
       border-radius: 10px;
-
       background: white;
       color: #0b4fa8;
-
       font-weight: 700;
       text-decoration: none;
-
-      transition:
-        transform
-        0.2s ease;
+      transition: transform 0.2s ease;
     }
 
-    .button:hover {
+    .button:hover,
+    .button:focus {
       transform: translateY(-2px);
     }
 
     .button-outline {
       color: white;
       background: transparent;
-
-      border:
-        2px solid
-        white;
+      border: 2px solid white;
     }
-
-
 
     /* =========================
        OFFICIAL LOGOS
@@ -341,14 +260,9 @@
     .logo-grid {
       max-width: 760px;
       margin: auto;
-
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 28px;
-
       align-items: center;
     }
 
@@ -361,38 +275,23 @@
     .logo-card {
       width: 145px;
       height: 145px;
-
       border-radius: 50%;
-
       background: white;
-
       padding: 6px;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       overflow: hidden;
-
-      border:
-        2px solid
-        #dbeafe;
-
-      box-shadow:
-        0 5px 22px
-        rgba(11, 79, 168, 0.16);
+      border: 2px solid #dbeafe;
+      box-shadow: 0 5px 22px rgba(11, 79, 168, 0.16);
     }
 
     .logo-card img {
       width: 100%;
       height: 100%;
-
       object-fit: contain;
-
       border-radius: 50%;
     }
-
-
 
     /* =========================
        ABOUT
@@ -405,20 +304,11 @@
     .about-card {
       max-width: 900px;
       margin: auto;
-
       background: white;
-
       padding: 30px;
-
       border-radius: 16px;
-
-      border-left:
-        5px solid
-        #1677e8;
-
-      box-shadow:
-        0 5px 20px
-        rgba(15, 23, 42, 0.08);
+      border-left: 5px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
     }
 
     .about-card p {
@@ -431,8 +321,6 @@
       margin-top: 17px;
     }
 
-
-
     /* =========================
        FEATURES
     ========================== */
@@ -443,31 +331,17 @@
 
     .cards {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .card {
       background: #ffffff;
-
       padding: 25px;
-
       border-radius: 15px;
-
-      border-top:
-        4px solid
-        #1677e8;
-
-      box-shadow:
-        0 5px 20px
-        rgba(15, 23, 42, 0.08);
-
-      transition:
-        transform
-        0.2s ease;
+      border-top: 4px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease;
     }
 
     .card:hover {
@@ -476,9 +350,7 @@
 
     .card h3 {
       color: #0b4fa8;
-
       margin-bottom: 9px;
-
       font-size: 18px;
     }
 
@@ -486,8 +358,6 @@
       color: #64748b;
       font-size: 15px;
     }
-
-
 
     /* =========================
        USER GUIDE
@@ -499,34 +369,18 @@
 
     .guide-intro {
       max-width: 850px;
-
-      margin:
-        0
-        auto
-        35px;
-
+      margin: 0 auto 28px;
       background: white;
-
-      border:
-        1px solid
-        #dbeafe;
-
+      border: 1px solid #dbeafe;
       border-radius: 16px;
-
       padding: 24px;
-
       text-align: center;
-
-      box-shadow:
-        0 5px 20px
-        rgba(11, 79, 168, 0.08);
+      box-shadow: 0 5px 20px rgba(11, 79, 168, 0.08);
     }
 
     .guide-intro h3 {
       color: #082f6b;
-
       font-size: 22px;
-
       margin-bottom: 8px;
     }
 
@@ -534,58 +388,77 @@
       color: #64748b;
     }
 
+    .guide-nav {
+      max-width: 1000px;
+      margin: 0 auto 18px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+    .guide-nav button {
+      appearance: none;
+      border: 1px solid #bfdbfe;
+      background: white;
+      color: #0b4fa8;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
 
-    /* ACCOUNT CREATION GUIDE */
+    .guide-nav button:hover,
+    .guide-nav button:focus,
+    .guide-nav button.active {
+      background: #0b4fa8;
+      color: white;
+      border-color: #0b4fa8;
+    }
+
+    .guide-nav button[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .guide-panel {
+      display: none;
+    }
+
+    .guide-panel.active {
+      display: block;
+    }
 
     .guide-feature {
       max-width: 1000px;
       margin: auto;
-
       background: white;
-
       border-radius: 20px;
-
       padding: 30px;
-
-      box-shadow:
-        0 8px 28px
-        rgba(15, 23, 42, 0.09);
+      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.09);
     }
 
     .guide-feature-header {
       margin-bottom: 28px;
-
       padding-bottom: 18px;
-
-      border-bottom:
-        1px solid
-        #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
     }
 
     .guide-label {
       display: inline-block;
-
       background: #dbeafe;
       color: #0b4fa8;
-
-      padding:
-        6px
-        13px;
-
+      padding: 6px 13px;
       border-radius: 30px;
-
       font-size: 13px;
       font-weight: 700;
-
       margin-bottom: 12px;
     }
 
     .guide-feature-header h3 {
       color: #082f6b;
-
       font-size: 28px;
-
       margin-bottom: 8px;
     }
 
@@ -596,86 +469,69 @@
 
     .guide-layout {
       display: grid;
-
-      grid-template-columns:
-        minmax(260px, 390px)
-        1fr;
-
+      grid-template-columns: minmax(260px, 390px) 1fr;
       gap: 34px;
-
       align-items: start;
     }
-
-
 
     /* SCREENSHOT */
 
     .guide-image-card {
-      background:
-        linear-gradient(
-          145deg,
-          #e8f2ff,
-          #f8fbff
-        );
-
+      background: linear-gradient(145deg, #e8f2ff, #f8fbff);
       padding: 18px;
-
       border-radius: 20px;
-
-      border:
-        1px solid
-        #dbeafe;
-
+      border: 1px solid #dbeafe;
       position: sticky;
       top: 145px;
     }
 
     .guide-image {
       display: block;
-
       width: 100%;
-
       border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.16);
+    }
 
-      box-shadow:
-        0 8px 25px
-        rgba(15, 23, 42, 0.16);
+    .guide-image-placeholder {
+      display: none;
+      min-height: 260px;
+      padding: 25px;
+      border-radius: 16px;
+      border: 2px dashed #93c5fd;
+      background: white;
+      color: #475569;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .guide-image-placeholder strong {
+      color: #0b4fa8;
     }
 
     .image-caption {
       color: #64748b;
-
       font-size: 13px;
-
       text-align: center;
-
       margin-top: 12px;
     }
-
-
 
     /* STEPS */
 
     .guide-steps {
       display: flex;
       flex-direction: column;
-
       gap: 15px;
     }
 
     .guide-step {
       display: flex;
-
       gap: 15px;
-
       padding: 18px;
-
       background: #f8fafc;
-
-      border:
-        1px solid
-        #e2e8f0;
-
+      border: 1px solid #e2e8f0;
       border-radius: 14px;
     }
 
@@ -683,63 +539,56 @@
       min-width: 38px;
       width: 38px;
       height: 38px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 50%;
-
       background: #1266b5;
       color: white;
-
       font-size: 16px;
       font-weight: 700;
     }
 
     .step-content h4 {
       color: #0b3b7e;
-
       font-size: 17px;
-
       margin-bottom: 4px;
     }
 
     .step-content p {
       color: #475569;
-
       font-size: 15px;
     }
 
-
-
-    /* IMPORTANT NOTE */
-
     .guide-note {
       margin-top: 20px;
-
       padding: 18px;
-
       border-radius: 14px;
-
       background: #fff8df;
-
-      border:
-        1px solid
-        #fde68a;
-
+      border: 1px solid #fde68a;
       color: #713f12;
     }
 
     .guide-note strong {
       display: block;
-
       margin-bottom: 5px;
-
       color: #92400e;
     }
 
+    .guide-success {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
 
+    .guide-success strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #047857;
+    }
 
     /* =========================
        PRIVACY
@@ -749,7 +598,21 @@
       background: white;
     }
 
+    .privacy-card {
+      max-width: 900px;
+      margin: auto;
+      background: #f8fafc;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+    }
 
+    .privacy-card p {
+      color: #475569;
+      font-size: 16px;
+      text-align: justify;
+    }
 
     /* =========================
        FOOTER
@@ -757,53 +620,34 @@
 
     footer {
       background: #061f46;
-
       color: #cbd5e1;
-
       text-align: center;
-
-      padding:
-        45px
-        20px
-        30px;
+      padding: 45px 20px 30px;
     }
 
     .footer-logos {
       display: flex;
-
       justify-content: center;
       align-items: center;
-
       flex-wrap: wrap;
-
       gap: 12px;
-
       margin-bottom: 23px;
     }
 
     .footer-logos img {
       width: 58px;
       height: 58px;
-
       object-fit: contain;
-
       border-radius: 50%;
-
       background: white;
-
       padding: 2px;
-
-      border:
-        2px solid
-        rgba(255, 255, 255, 0.9);
+      border: 2px solid rgba(255, 255, 255, 0.9);
     }
 
     .footer-title {
       color: white;
-
       font-size: 19px;
       font-weight: 700;
-
       margin-bottom: 3px;
     }
 
@@ -817,26 +661,18 @@
       font-size: 13px;
     }
 
-
-
     /* =========================
        TABLET
     ========================== */
 
-    @media
-    (max-width: 850px) {
-
+    @media (max-width: 850px) {
       .cards {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .logo-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
         max-width: 430px;
-
         gap: 30px;
       }
 
@@ -846,28 +682,18 @@
 
       .guide-image-card {
         position: static;
-
         max-width: 430px;
-
         margin: auto;
       }
-
     }
-
-
 
     /* =========================
        MOBILE
     ========================== */
 
-    @media
-    (max-width: 600px) {
-
+    @media (max-width: 600px) {
       .header-container {
-        padding:
-          12px
-          12px
-          9px;
+        padding: 12px 12px 9px;
       }
 
       .brand {
@@ -880,9 +706,7 @@
       }
 
       nav {
-        gap:
-          3px
-          17px;
+        gap: 3px 17px;
       }
 
       nav a {
@@ -890,10 +714,7 @@
       }
 
       .hero {
-        padding:
-          55px
-          20px
-          65px;
+        padding: 55px 20px 65px;
       }
 
       .hero-logo {
@@ -913,9 +734,7 @@
       }
 
       section {
-        padding:
-          55px
-          16px;
+        padding: 55px 16px;
       }
 
       .section-title h2 {
@@ -927,12 +746,8 @@
       }
 
       .logo-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-
-        gap:
-          28px
-          22px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 22px;
       }
 
       .logo-card {
@@ -941,15 +756,11 @@
       }
 
       .about-card {
-        padding:
-          25px
-          22px;
+        padding: 25px 22px;
       }
 
       .guide-feature {
-        padding:
-          22px
-          16px;
+        padding: 22px 16px;
       }
 
       .guide-feature-header h3 {
@@ -962,28 +773,19 @@
 
       .step-number {
         min-width: 34px;
-
         width: 34px;
         height: 34px;
-
         font-size: 14px;
       }
-
     }
-
-
 
     /* =========================
        SMALL PHONES
     ========================== */
 
-    @media
-    (max-width: 390px) {
-
+    @media (max-width: 390px) {
       nav {
-        gap:
-          3px
-          12px;
+        gap: 3px 12px;
       }
 
       nav a {
@@ -1000,427 +802,221 @@
       }
 
       .guide-feature {
-        padding:
-          20px
-          13px;
+        padding: 20px 13px;
       }
 
       .guide-step {
         gap: 11px;
       }
-
     }
-
   </style>
-
 </head>
 
-
 <body>
-
-
 
   <!-- =========================
        HEADER
   ========================== -->
 
   <header>
-
     <div class="header-container">
-
       <div class="brand">
-
         <img
           src="sk-kabunga-an-logo.png"
           alt="SK Kabunga-an Official App Logo"
         >
-
-        <span>
-          SK Kabunga-an
-        </span>
-
+        <span>SK Kabunga-an</span>
       </div>
 
-
       <nav>
-
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#logos">
-          Logos
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#features">
-          Features
-        </a>
-
-        <a href="#guide">
-          User Guide
-        </a>
-
-        <a href="#privacy">
-          Privacy
-        </a>
-
+        <a href="#home">Home</a>
+        <a href="#logos">Logos</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#guide">User Guide</a>
+        <a href="#privacy">Privacy</a>
       </nav>
-
     </div>
-
   </header>
-
-
 
   <!-- =========================
        HERO
   ========================== -->
 
-  <section
-    class="hero"
-    id="home"
-  >
-
+  <section class="hero" id="home">
     <div class="hero-content">
-
       <img
         class="hero-logo"
         src="sk-kabunga-an-logo.png"
         alt="SK Kabunga-an Official App"
       >
 
-
-      <h1>
-        SK Kabunga-an Official App
-      </h1>
-
+      <h1>SK Kabunga-an Official App</h1>
 
       <div class="hero-subtitle">
         Sangguniang Kabataan • Barangay Kabunga-an
       </div>
 
-
       <p class="hero-description">
-
-        An offline-first management application
-        designed to help Sangguniang Kabataan
-        officials manage youth records, activities,
-        projects, finances, meetings, documents,
-        attendance, inventory, and other
-        SK operations.
-
+        An offline-first management application designed to help
+        Sangguniang Kabataan officials manage youth records,
+        activities, projects, finances, meetings, documents,
+        attendance, inventory, and other SK operations.
       </p>
 
-
       <div class="button-group">
-
-        <a
-          class="button"
-          href="#guide"
-        >
-          View User Guide
-        </a>
-
-
-        <a
-          class="button button-outline"
-          href="#features"
-        >
-          Explore Features
-        </a>
-
+        <a class="button" href="#guide">View User Guide</a>
+        <a class="button button-outline" href="#features">Explore Features</a>
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- =========================
        OFFICIAL LOGOS
   ========================== -->
 
-  <section
-    class="official-logos"
-    id="logos"
-  >
-
+  <section class="official-logos" id="logos">
     <div class="container">
-
-
       <div class="section-title">
-
-        <h2>
-          Official Logos
-        </h2>
-
+        <h2>Official Logos</h2>
         <p>
-          The official identities associated
-          with the SK Kabunga-an Official App.
+          The official identities associated with the
+          SK Kabunga-an Official App.
         </p>
-
       </div>
 
-
-
       <div class="logo-grid">
-
-
         <div class="logo-item">
-
           <div class="logo-card">
-
-            <img
-              src="baybay-logo.png"
-              alt="City of Baybay Logo"
-            >
-
+            <img src="baybay-logo.png" alt="City of Baybay Logo">
           </div>
-
         </div>
 
-
-
         <div class="logo-item">
-
           <div class="logo-card">
-
             <img
               src="barangay-kabunga-an-logo.png"
               alt="Barangay Kabunga-an Logo"
             >
-
           </div>
-
         </div>
 
-
-
         <div class="logo-item">
-
           <div class="logo-card">
-
             <img
               src="sk-kabunga-an-seal.png"
               alt="Sangguniang Kabataan Kabunga-an Logo"
             >
-
           </div>
-
         </div>
 
-
-
         <div class="logo-item">
-
           <div class="logo-card">
-
             <img
               src="sk-kabunga-an-logo.png"
               alt="SK Kabunga-an Official App Logo"
             >
-
           </div>
-
         </div>
-
-
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- =========================
        ABOUT
   ========================== -->
 
-  <section
-    class="about-section"
-    id="about"
-  >
-
+  <section class="about-section" id="about">
     <div class="container">
-
-
       <div class="section-title">
-
-        <h2>
-          About the App
-        </h2>
-
+        <h2>About the App</h2>
         <p>
-          Built to make SK management simpler,
-          organized, accessible, and reliable.
+          Built to make SK management simpler, organized,
+          accessible, and reliable.
         </p>
-
       </div>
-
-
 
       <div class="about-card">
-
         <p>
-
-          The SK Kabunga-an Official App is
-          designed to assist the Sangguniang
-          Kabataan of Barangay Kabunga-an in
-          managing important information and
-          day-to-day operations from an
-          Android device.
-
+          The SK Kabunga-an Official App is designed to assist
+          the Sangguniang Kabataan of Barangay Kabunga-an in
+          managing important information and day-to-day
+          operations from an Android device.
         </p>
 
-
         <p>
-
-          The application follows an
-          offline-first approach, allowing
-          important features and records to
-          remain available even without a
-          continuous internet connection.
-
+          The application follows an offline-first approach,
+          allowing important features and records to remain
+          available even without a continuous internet
+          connection.
         </p>
-
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- =========================
        FEATURES
   ========================== -->
 
-  <section
-    class="features-section"
-    id="features"
-  >
-
+  <section class="features-section" id="features">
     <div class="container">
-
-
       <div class="section-title">
-
-        <h2>
-          App Features
-        </h2>
-
+        <h2>App Features</h2>
         <p>
-          Tools created to support the
-          day-to-day operations of
-          SK Kabunga-an.
+          Tools created to support the day-to-day operations
+          of SK Kabunga-an.
         </p>
-
       </div>
 
-
-
       <div class="cards">
-
-
         <div class="card">
-
-          <h3>
-            Youth Registry
-          </h3>
-
+          <h3>Youth Registry</h3>
           <p>
-            Register, update, search,
-            and manage youth information
-            and records.
+            Register, update, search, and manage youth
+            information and records.
           </p>
-
         </div>
 
-
-
         <div class="card">
-
-          <h3>
-            Finance
-          </h3>
-
+          <h3>Finance</h3>
           <p>
-            Manage budgets, allocations,
-            expenses, and financial records.
+            Manage budgets, allocations, expenses,
+            and financial records.
           </p>
-
         </div>
 
-
-
         <div class="card">
-
-          <h3>
-            Activities
-          </h3>
-
+          <h3>Activities</h3>
           <p>
-            Create activities, manage
-            participants, and record
-            attendance.
+            Create activities, manage participants,
+            and record attendance.
           </p>
-
         </div>
 
-
-
         <div class="card">
-
-          <h3>
-            Projects
-          </h3>
-
+          <h3>Projects</h3>
           <p>
-            Organize SK projects,
-            participants, expenses,
-            and progress.
+            Organize SK projects, participants,
+            expenses, and progress.
           </p>
-
         </div>
 
-
-
         <div class="card">
-
-          <h3>
-            Meetings
-          </h3>
-
+          <h3>Meetings</h3>
           <p>
-            Create and manage SK
-            meeting information
+            Create and manage SK meeting information
             and schedules.
           </p>
-
         </div>
-
-
 
         <div class="card">
-
-          <h3>
-            QR Tools
-          </h3>
-
+          <h3>QR Tools</h3>
           <p>
-            Use QR codes for faster
-            attendance and easier
-            youth registration.
+            Use QR codes for faster attendance
+            and easier youth registration.
           </p>
-
         </div>
 
-
-
-        <div cl
+        <div class="card">
+          <h3>Documents</h3>
+     
