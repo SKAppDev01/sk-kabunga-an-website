@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="theme-color"
-    content="#0b3b7e"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b3b7e">
 
   <title>SK Kabunga-an Official App</title>
 
   <style>
-    /* =========================
-       GLOBAL
-    ========================== */
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -70,9 +57,7 @@
       font-size: 17px;
     }
 
-    /* =========================
-       HEADER
-    ========================== */
+    /* HEADER */
 
     header {
       background: #0b3b7e;
@@ -113,9 +98,7 @@
       border: 2px solid rgba(255, 255, 255, 0.85);
     }
 
-    /* =========================
-       NAVIGATION
-    ========================== */
+    /* NAVIGATION */
 
     nav {
       width: 100%;
@@ -141,9 +124,7 @@
       color: #ffd21f;
     }
 
-    /* =========================
-       HERO
-    ========================== */
+    /* HERO */
 
     .hero {
       background:
@@ -216,9 +197,7 @@
       font-size: 17px;
     }
 
-    /* =========================
-       BUTTONS
-    ========================== */
+    /* BUTTONS */
 
     .button-group {
       display: flex;
@@ -249,9 +228,7 @@
       border: 2px solid white;
     }
 
-    /* =========================
-       OFFICIAL LOGOS
-    ========================== */
+    /* OFFICIAL LOGOS */
 
     .official-logos {
       background: white;
@@ -293,9 +270,7 @@
       border-radius: 50%;
     }
 
-    /* =========================
-       ABOUT
-    ========================== */
+    /* ABOUT */
 
     .about-section {
       background: #f4f8ff;
@@ -321,9 +296,7 @@
       margin-top: 17px;
     }
 
-    /* =========================
-       FEATURES
-    ========================== */
+    /* FEATURES */
 
     .features-section {
       background: white;
@@ -359,83 +332,19 @@
       font-size: 15px;
     }
 
-    /* =========================
-       USER GUIDE
-    ========================== */
+    /* USER GUIDE */
 
     .guide-section {
       background: #eef5ff;
-    }
-
-    .guide-intro {
-      max-width: 850px;
-      margin: 0 auto 28px;
-      background: white;
-      border: 1px solid #dbeafe;
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(11, 79, 168, 0.08);
-    }
-
-    .guide-intro h3 {
-      color: #082f6b;
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .guide-intro p {
-      color: #64748b;
-    }
-
-    .guide-nav {
-      max-width: 1000px;
-      margin: 0 auto 18px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .guide-nav button {
-      appearance: none;
-      border: 1px solid #bfdbfe;
-      background: white;
-      color: #0b4fa8;
-      padding: 10px 15px;
-      border-radius: 999px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .guide-nav button:hover,
-    .guide-nav button:focus,
-    .guide-nav button.active {
-      background: #0b4fa8;
-      color: white;
-      border-color: #0b4fa8;
-    }
-
-    .guide-nav button[disabled] {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .guide-panel {
-      display: none;
-    }
-
-    .guide-panel.active {
-      display: block;
     }
 
     .guide-feature {
       max-width: 1000px;
       margin: auto;
       background: white;
-      border-radius: 20px;
       padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #dbeafe;
       box-shadow: 0 8px 28px rgba(15, 23, 42, 0.09);
     }
 
@@ -474,15 +383,11 @@
       align-items: start;
     }
 
-    /* SCREENSHOT */
-
     .guide-image-card {
       background: linear-gradient(145deg, #e8f2ff, #f8fbff);
-      padding: 18px;
+      padding: 16px;
       border-radius: 20px;
       border: 1px solid #dbeafe;
-      position: sticky;
-      top: 145px;
     }
 
     .guide-image {
@@ -492,33 +397,12 @@
       box-shadow: 0 8px 25px rgba(15, 23, 42, 0.16);
     }
 
-    .guide-image-placeholder {
-      display: none;
-      min-height: 260px;
-      padding: 25px;
-      border-radius: 16px;
-      border: 2px dashed #93c5fd;
-      background: white;
-      color: #475569;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .guide-image-placeholder strong {
-      color: #0b4fa8;
-    }
-
     .image-caption {
       color: #64748b;
       font-size: 13px;
       text-align: center;
       margin-top: 12px;
     }
-
-    /* STEPS */
 
     .guide-steps {
       display: flex;
@@ -571,28 +455,23 @@
 
     .guide-note strong {
       display: block;
-      margin-bottom: 5px;
       color: #92400e;
-    }
-
-    .guide-success {
-      margin-top: 20px;
-      padding: 18px;
-      border-radius: 14px;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      color: #065f46;
-    }
-
-    .guide-success strong {
-      display: block;
       margin-bottom: 5px;
-      color: #047857;
     }
 
-    /* =========================
-       PRIVACY
-    ========================== */
+    .guide-coming-soon {
+      max-width: 1000px;
+      margin: 18px auto 0;
+      padding: 16px 18px;
+      text-align: center;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid #dbeafe;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* PRIVACY */
 
     .privacy-section {
       background: white;
@@ -602,10 +481,10 @@
       max-width: 900px;
       margin: auto;
       background: #f8fafc;
-      padding: 28px;
+      padding: 30px;
       border-radius: 16px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+      border-left: 5px solid #1677e8;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
     }
 
     .privacy-card p {
@@ -614,9 +493,11 @@
       text-align: justify;
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
+    .privacy-card p + p {
+      margin-top: 17px;
+    }
+
+    /* FOOTER */
 
     footer {
       background: #061f46;
@@ -661,9 +542,7 @@
       font-size: 13px;
     }
 
-    /* =========================
-       TABLET
-    ========================== */
+    /* TABLET */
 
     @media (max-width: 850px) {
       .cards {
@@ -681,15 +560,12 @@
       }
 
       .guide-image-card {
-        position: static;
         max-width: 430px;
         margin: auto;
       }
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* MOBILE */
 
     @media (max-width: 600px) {
       .header-container {
@@ -755,7 +631,8 @@
         height: 125px;
       }
 
-      .about-card {
+      .about-card,
+      .privacy-card {
         padding: 25px 22px;
       }
 
@@ -779,9 +656,7 @@
       }
     }
 
-    /* =========================
-       SMALL PHONES
-    ========================== */
+    /* SMALL PHONES */
 
     @media (max-width: 390px) {
       nav {
@@ -800,23 +675,11 @@
         width: 110px;
         height: 110px;
       }
-
-      .guide-feature {
-        padding: 20px 13px;
-      }
-
-      .guide-step {
-        gap: 11px;
-      }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- =========================
-       HEADER
-  ========================== -->
 
   <header>
     <div class="header-container">
@@ -838,10 +701,6 @@
       </nav>
     </div>
   </header>
-
-  <!-- =========================
-       HERO
-  ========================== -->
 
   <section class="hero" id="home">
     <div class="hero-content">
@@ -866,14 +725,12 @@
 
       <div class="button-group">
         <a class="button" href="#guide">View User Guide</a>
-        <a class="button button-outline" href="#features">Explore Features</a>
+        <a class="button button-outline" href="#features">
+          Explore Features
+        </a>
       </div>
     </div>
   </section>
-
-  <!-- =========================
-       OFFICIAL LOGOS
-  ========================== -->
 
   <section class="official-logos" id="logos">
     <div class="container">
@@ -888,7 +745,10 @@
       <div class="logo-grid">
         <div class="logo-item">
           <div class="logo-card">
-            <img src="baybay-logo.png" alt="City of Baybay Logo">
+            <img
+              src="baybay-logo.png"
+              alt="City of Baybay Logo"
+            >
           </div>
         </div>
 
@@ -922,17 +782,13 @@
     </div>
   </section>
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
-
   <section class="about-section" id="about">
     <div class="container">
       <div class="section-title">
         <h2>About the App</h2>
         <p>
-          Built to make SK management simpler, organized,
-          accessible, and reliable.
+          Built to make SK management simpler,
+          organized, accessible, and reliable.
         </p>
       </div>
 
@@ -954,17 +810,13 @@
     </div>
   </section>
 
-  <!-- =========================
-       FEATURES
-  ========================== -->
-
   <section class="features-section" id="features">
     <div class="container">
       <div class="section-title">
         <h2>App Features</h2>
         <p>
-          Tools created to support the day-to-day operations
-          of SK Kabunga-an.
+          Tools created to support the day-to-day
+          operations of SK Kabunga-an.
         </p>
       </div>
 
@@ -1012,41 +864,13 @@
         <div class="card">
           <h3>QR Tools</h3>
           <p>
-            Use QR codes for faster attendance
-            and easier youth registration.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Documents</h3>
-          <p>
-            Organize SK documents and keep important
-            records easier to access.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Inventory</h3>
-          <p>
-            Record and manage SK items, equipment,
-            and returns.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Data Management</h3>
-          <p>
-            Use backup, import, and transfer tools
-            to help protect local records.
+            Use QR codes for faster attendance and
+            easier youth registration.
           </p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- =========================
-       USER GUIDE
-  ========================== -->
 
   <section class="guide-section" id="guide">
     <div class="container">
@@ -1058,229 +882,122 @@
         </p>
       </div>
 
-      <div class="guide-intro">
-        <h3>How to Use the App</h3>
-        <p>
-          Select a guide below. We are starting with
-          Account Creation and more guides can be added
-          here as the app documentation grows.
-        </p>
-      </div>
+      <div class="guide-feature">
+        <div class="guide-feature-header">
+          <span class="guide-label">Getting Started</span>
 
-      <div class="guide-nav" aria-label="User guide topics">
-        <button
-          type="button"
-          class="guide-tab active"
-          data-guide="account"
-          aria-controls="guide-account"
-          aria-selected="true"
-        >
-          Account Creation
-        </button>
+          <h3>Sign In to Your Account</h3>
 
-        <button
-          type="button"
-          title="This guide will be added next"
-          disabled
-        >
-          Login
-        </button>
+          <p>
+            Use the login screen to access your local
+            SK account on the device.
+          </p>
+        </div>
 
-        <button
-          type="button"
-          title="This guide will be added next"
-          disabled
-        >
-          Home
-        </button>
+        <div class="guide-layout">
+          <div class="guide-image-card">
+            <img
+              class="guide-image"
+              src="login-guide.png"
+              alt="SK Kabunga-an Official App login screen"
+            >
 
-        <button
-          type="button"
-          title="This guide will be added next"
-          disabled
-        >
-          Youth Registry
-        </button>
-
-        <button
-          type="button"
-          title="This guide will be added next"
-          disabled
-        >
-          Finance
-        </button>
-      </div>
-
-      <!-- ACCOUNT CREATION -->
-      <div
-        class="guide-panel active"
-        id="guide-account"
-        data-panel="account"
-      >
-        <div class="guide-feature">
-          <div class="guide-feature-header">
-            <span class="guide-label">Getting Started</span>
-
-            <h3>Create an Account</h3>
-
-            <p>
-              Follow these steps when opening the app for the
-              first time or when creating a new local account
-              on the device.
+            <p class="image-caption">
+              Login screen of the SK Kabunga-an Official App.
             </p>
           </div>
 
-          <div class="guide-layout">
-            <div class="guide-image-card">
-              <img
-                class="guide-image"
-                id="account-guide-image"
-                src="account-creation.png"
-                alt="SK Kabunga-an app account creation screen"
-              >
+          <div>
+            <div class="guide-steps">
+              <div class="guide-step">
+                <div class="step-number">1</div>
 
-              <div
-                class="guide-image-placeholder"
-                id="account-image-placeholder"
-              >
-                <strong>Account Creation Screenshot</strong>
-
-                <span>
-                  Put your screenshot in the same folder as
-                  this HTML file and name it:
-                </span>
-
-                <strong>account-creation.png</strong>
+                <div class="step-content">
+                  <h4>Enter a Username</h4>
+                  <p>
+                    Tap the Username field and enter the
+                    username you created for your local
+                    SK account.
+                  </p>
+                </div>
               </div>
 
-              <p class="image-caption">
-                Account Creation screen of the
-                SK Kabunga-an Official App.
-              </p>
+              <div class="guide-step">
+                <div class="step-number">2</div>
+
+                <div class="step-content">
+                  <h4>Enter Your Password</h4>
+                  <p>
+                    Tap the Password field and enter your
+                    account password. Use the eye icon if
+                    you want to show or hide the password
+                    while typing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="guide-step">
+                <div class="step-number">3</div>
+
+                <div class="step-content">
+                  <h4>Tap Sign In</h4>
+                  <p>
+                    After entering the correct username and
+                    password, tap the blue Sign In button to
+                    access the application.
+                  </p>
+                </div>
+              </div>
+
+              <div class="guide-step">
+                <div class="step-number">4</div>
+
+                <div class="step-content">
+                  <h4>Forgot Your Password?</h4>
+                  <p>
+                    If you cannot remember your password,
+                    tap Forgot password? and follow the
+                    account recovery process.
+                  </p>
+                </div>
+              </div>
+
+              <div class="guide-step">
+                <div class="step-number">5</div>
+
+                <div class="step-content">
+                  <h4>Create an Account if Needed</h4>
+                  <p>
+                    If you do not have an account yet, tap
+                    Create account at the bottom of the login
+                    screen to begin account registration.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <div class="guide-steps">
-                <div class="guide-step">
-                  <div class="step-number">1</div>
-
-                  <div class="step-content">
-                    <h4>Enter a Username</h4>
-
-                    <p>
-                      Type the username you want to use for
-                      your local SK account. The username
-                      must contain at least 3 characters.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="guide-step">
-                  <div class="step-number">2</div>
-
-                  <div class="step-content">
-                    <h4>Create a Password</h4>
-
-                    <p>
-                      Enter a password with at least
-                      6 characters. Choose something that
-                      you can remember but that other people
-                      cannot easily guess.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="guide-step">
-                  <div class="step-number">3</div>
-
-                  <div class="step-content">
-                    <h4>Confirm the Password</h4>
-
-                    <p>
-                      Enter the same password again in the
-                      Confirm Password field. Both password
-                      entries must match.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="guide-step">
-                  <div class="step-number">4</div>
-
-                  <div class="step-content">
-                    <h4>Select a Recovery Question</h4>
-
-                    <p>
-                      Choose a recovery question that you
-                      can answer later if you forget your
-                      password.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="guide-step">
-                  <div class="step-number">5</div>
-
-                  <div class="step-content">
-                    <h4>Enter the Recovery Answer</h4>
-
-                    <p>
-                      Type your answer to the selected
-                      recovery question. The answer should
-                      contain at least 3 characters.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="guide-step">
-                  <div class="step-number">6</div>
-
-                  <div class="step-content">
-                    <h4>Tap Create Account</h4>
-
-                    <p>
-                      Review the information you entered,
-                      then tap the Create Account button.
-                      When the account is created
-                      successfully, continue to the login
-                      screen.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="guide-note">
-                <strong>Important</strong>
-
-                Keep your username, password, recovery
-                question, and recovery answer private.
-                Your recovery information may be needed
-                if you forget your password.
-              </div>
-
-              <div class="guide-success">
-                <strong>Account Created Successfully</strong>
-
-                After successful account creation, tap
-                Continue and sign in using the username
-                and password you created.
-              </div>
+            <div class="guide-note">
+              <strong>Offline Account</strong>
+              The login screen is for your local SK account.
+              Keep your username and password private and
+              protect access to the device where your records
+              are stored.
             </div>
           </div>
         </div>
       </div>
+
+      <div class="guide-coming-soon">
+        More user guide topics will be added as we document
+        the remaining app features.
+      </div>
     </div>
   </section>
-
-  <!-- =========================
-       PRIVACY
-  ========================== -->
 
   <section class="privacy-section" id="privacy">
     <div class="container">
       <div class="section-title">
         <h2>Privacy & Offline Use</h2>
-
         <p>
           Designed with local access and responsible
           handling of SK information in mind.
@@ -1290,23 +1007,29 @@
       <div class="privacy-card">
         <p>
           The SK Kabunga-an Official App follows an
-          offline-first design. Users should still handle
-          youth information, financial records, documents,
-          account credentials, backups, and other SK data
-          responsibly. Access to the device and application
-          should be limited to authorized users.
+          offline-first approach. Important application
+          records are designed to remain available on the
+          device even when a continuous internet connection
+          is unavailable.
+        </p>
+
+        <p>
+          Users should handle youth information, financial
+          records, documents, account credentials, backups,
+          and other SK data responsibly. Access to the
+          device and application should be limited to
+          authorized users.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
     <div class="footer-logos">
-      <img src="baybay-logo.png" alt="City of Baybay Logo">
+      <img
+        src="baybay-logo.png"
+        alt="City of Baybay Logo"
+      >
 
       <img
         src="barangay-kabunga-an-logo.png"
@@ -1333,64 +1056,9 @@
     </div>
 
     <div class="copyright">
-      &copy; <span id="year"></span>
-      SK Kabunga-an. All rights reserved.
+      &copy; 2026 SK Kabunga-an. All rights reserved.
     </div>
   </footer>
-
-  <script>
-    // Automatically update copyright year.
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    // User Guide tabs.
-    const guideTabs = document.querySelectorAll(".guide-tab");
-    const guidePanels = document.querySelectorAll(".guide-panel");
-
-    guideTabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const target = tab.dataset.guide;
-
-        guideTabs.forEach((item) => {
-          item.classList.remove("active");
-          item.setAttribute("aria-selected", "false");
-        });
-
-        guidePanels.forEach((panel) => {
-          panel.classList.remove("active");
-        });
-
-        tab.classList.add("active");
-        tab.setAttribute("aria-selected", "true");
-
-        const panel = document.querySelector(
-          '[data-panel="' + target + '"]'
-        );
-
-        if (panel) {
-          panel.classList.add("active");
-        }
-      });
-    });
-
-    // If account-creation.png is not yet in the repository,
-    // show a clean placeholder instead of a broken image icon.
-    const accountImage =
-      document.getElementById("account-guide-image");
-
-    const accountPlaceholder =
-      document.getElementById("account-image-placeholder");
-
-    accountImage.addEventListener("error", () => {
-      accountImage.style.display = "none";
-      accountPlaceholder.style.display = "flex";
-    });
-
-    accountImage.addEventListener("load", () => {
-      accountImage.style.display = "block";
-      accountPlaceholder.style.display = "none";
-    });
-  </script>
 
 </body>
 </html>
