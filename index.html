@@ -139,10 +139,14 @@
       background:
         linear-gradient(
           135deg,
-          #082f6b 0%,
-          #0b4fa8 48%,
-          #1677e8 100%
-        );
+          rgba(8, 47, 107, 0.78) 0%,
+          rgba(11, 79, 168, 0.70) 48%,
+          rgba(22, 119, 232, 0.58) 100%
+        ),
+        url("kabungaan-hero-bg.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       color: white;
       text-align: center;
       padding: 65px 20px 80px;
@@ -151,25 +155,11 @@
     }
 
     .hero::before {
-      content: "";
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-      top: -130px;
-      right: -130px;
+      content: none;
     }
 
     .hero::after {
-      content: "";
-      position: absolute;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04);
-      bottom: -130px;
-      left: -110px;
+      content: none;
     }
 
     .hero-content {
@@ -177,6 +167,7 @@
       margin: auto;
       position: relative;
       z-index: 2;
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.34);
     }
 
     .hero-logo {
@@ -202,7 +193,7 @@
     .hero-description {
       max-width: 720px;
       margin: 0 auto 30px;
-      color: #edf6ff;
+      color: #f8fbff;
       font-size: 17px;
     }
 
@@ -233,8 +224,9 @@
 
     .button-outline {
       color: white;
-      background: transparent;
-      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(2px);
     }
 
     /* OFFICIAL LOGOS */
