@@ -1194,16 +1194,64 @@
     }
 
     .home-gallery-wrap {
-      max-width: 980px;
+      max-width: 1120px;
       margin: auto;
     }
 
-    .home-gallery-card {
+    .home-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .home-gallery-card,
+    .home-map-card {
       background: #ffffff;
       border-radius: 22px;
       box-shadow: 0 10px 28px rgba(15, 23, 42, 0.11);
       border: 1px solid #e2e8f0;
       overflow: hidden;
+    }
+
+    .home-gallery-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home-map-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .home-map-frame {
+      width: 100%;
+      min-height: 420px;
+      flex: 1;
+      border: 0;
+      display: block;
+      background: #e2e8f0;
+    }
+
+    .home-map-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 12px 16px;
+      background: #ffffff;
+      color: #0b4fa8;
+      font-weight: 800;
+      text-decoration: none;
+      border-top: 1px solid #e2e8f0;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .home-map-link:hover,
+    .home-map-link:focus {
+      background: #eff6ff;
+      color: #083b7a;
     }
 
     .home-gallery-viewport {
@@ -1225,7 +1273,7 @@
     .home-gallery-slide img {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 3 / 2;
       object-fit: cover;
       background: #e2e8f0;
     }
@@ -1288,7 +1336,7 @@
     }
 
     .home-gallery-content {
-      padding: 18px 24px 26px;
+      padding: 24px 24px 0;
       text-align: center;
     }
 
@@ -1303,6 +1351,16 @@
       margin: 0 auto;
       color: #64748b;
       font-size: 16px;
+    }
+
+    @media (max-width: 850px) {
+      .home-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .home-map-frame {
+        min-height: 380px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -1385,9 +1443,8 @@
         Discover the scenic beauty of Kabunga-an through these featured views.
       </p>
 </div>
-<div class="home-gallery-wrap">
-<div class="home-gallery-card">
-<div class="home-gallery-viewport">
+<div class="home-gallery-wrap"><div class="home-gallery-grid">
+<div class="home-gallery-card home-gallery-image-panel"><div class="home-gallery-viewport">
 <button aria-label="Previous image" class="home-gallery-arrow prev" id="home-gallery-prev" type="button">
             ‹
           </button>
@@ -1406,14 +1463,19 @@
 <div aria-hidden="true" class="home-gallery-slide" data-home-gallery-slide="4">
 <img alt="A cascading waterfall surrounded by vibrant greenery" src="home-gallery-4.jpg"/>
 </div>
-</div>
-<div aria-label="Image slide indicators" class="home-gallery-dots" id="home-gallery-dots">
+</div><div aria-label="Image slide indicators" class="home-gallery-dots" id="home-gallery-dots">
 <button aria-label="Show image 1" class="home-gallery-dot active" data-home-gallery-dot="1" type="button"></button>
 <button aria-label="Show image 2" class="home-gallery-dot" data-home-gallery-dot="2" type="button"></button>
 <button aria-label="Show image 3" class="home-gallery-dot" data-home-gallery-dot="3" type="button"></button>
 <button aria-label="Show image 4" class="home-gallery-dot" data-home-gallery-dot="4" type="button"></button>
+</div></div>
+<div class="home-map-card">
+<iframe allowfullscreen="" class="home-map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=HVPR%2BJ27%20Naba%20Falls%20Brgy.%20Kabunga-an%20Baybay%20City%20Leyte&amp;output=embed" title="Interactive map of Naba Falls and Sisong Canyons"></iframe>
+<a class="home-map-link" href="https://maps.app.goo.gl/J3CDeVFXbBcYCLcz6" rel="noopener noreferrer" target="_blank">
+      Open in Google Maps ↗
+    </a>
 </div>
-<div class="home-gallery-content">
+</div><div class="home-gallery-content">
 <h3>Naba Falls and Sisong Canyons</h3>
 <p>
             A breathtaking view of Naba Falls and Sisong Canyons, where
@@ -1421,12 +1483,9 @@
             and lush greenery create a peaceful natural escape in the heart of
             Kabunga-an.
           </p>
-</div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
-
 <footer>
 <div class="footer-logos">
 <img alt="City of Baybay Logo" src="baybay-logo.png"/>
