@@ -310,13 +310,19 @@
       margin: 52px auto 0;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      background: #f8fbff;
-      border-top: 1px solid #dbeafe;
-      border-bottom: 1px solid #dbeafe;
+      gap: 24px;
+      background: transparent;
+      border: 0;
+      align-items: stretch;
     }
 
     .mission-vision-item {
       padding: 34px 38px;
+      background: #ffffff;
+      border: 1px solid #dbeafe;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
+      height: 100%;
     }
 
     .mission-vision-item + .mission-vision-item {
@@ -1043,7 +1049,7 @@
 
       .mission-vision-item + .mission-vision-item {
         border-left: 0;
-        border-top: 1px solid #dbeafe;
+        border-top: 0;
       }
 
       .cards {
@@ -1284,12 +1290,12 @@
           connection.
         </p>
 </div><div aria-label="Mission and Vision" class="mission-vision-grid">
-<section class="mission-vision-item">
+<section class="mission-vision-item mission-vision-card">
 <div class="mission-vision-kicker">Our Purpose</div>
 <h3>Mission</h3>
 <p>To provide the Sangguniang Kabataan of Barangay Kabunga-an with a reliable, accessible, and offline-first digital platform that simplifies youth registration, financial management, project and activity monitoring, attendance, records, and other essential SK operations—helping officials serve the youth with greater organization, transparency, and efficiency.</p>
 </section>
-<section class="mission-vision-item">
+<section class="mission-vision-item mission-vision-card">
 <div class="mission-vision-kicker">Our Direction</div>
 <h3>Vision</h3>
 <p>To build a more digitally empowered, organized, transparent, and youth-centered Sangguniang Kabataan in Barangay Kabunga-an, where technology strengthens public service, improves access to information, supports responsible governance, and encourages meaningful participation among young people in the community.</p>
