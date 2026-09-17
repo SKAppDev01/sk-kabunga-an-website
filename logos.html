@@ -1181,6 +1181,147 @@
       border-radius: 999px;
       background: #ffd21f;
     }
+
+
+    /* =========================
+       ABOUT THE LOGOS
+    ========================== */
+    .logo-about-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 20px 80px;
+    }
+
+    .logo-about-heading {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .logo-about-heading h2 {
+      margin: 0 0 10px;
+      color: #082f6b;
+      font-size: 32px;
+    }
+
+    .logo-about-heading p {
+      margin: 0;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    .logo-about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .logo-about-card {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+      padding: 26px;
+      background: #ffffff;
+      border: 1px solid #dbeafe;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .logo-about-emblem {
+      width: 112px;
+      height: 112px;
+      padding: 10px;
+      object-fit: contain;
+      background: #f8fbff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+    }
+
+    .logo-about-kicker {
+      margin-bottom: 5px;
+      color: #1677e8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .logo-about-card h3 {
+      margin: 0 0 10px;
+      color: #0b3b7e;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .logo-about-card p {
+      margin: 0;
+      color: #475569;
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .logo-about-card p + p {
+      margin-top: 12px;
+    }
+
+    .logo-symbol-list {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #475569;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .logo-symbol-list li + li {
+      margin-top: 5px;
+    }
+
+    .logo-source {
+      margin-top: 14px !important;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b !important;
+      font-size: 13px !important;
+    }
+
+    .logo-source a {
+      color: #0b4fa8;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .logo-source a:hover,
+    .logo-source a:focus {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 850px) {
+      .logo-about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .logo-about-section {
+        padding: 0 16px 62px;
+      }
+
+      .logo-about-heading h2 {
+        font-size: 28px;
+      }
+
+      .logo-about-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .logo-about-emblem {
+        width: 96px;
+        height: 96px;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1236,6 +1377,66 @@
 </section>
 
 
+
+
+<section class="logo-about-section" aria-labelledby="logo-about-title">
+  <div class="logo-about-heading">
+    <h2 id="logo-about-title">About the Logos</h2>
+    <p>Each mark represents a different part of the identity behind the SK Kabunga-an Official App, the local youth council, Barangay Kabunga-an, and Baybay City.</p>
+  </div>
+
+  <div class="logo-about-grid">
+    <article class="logo-about-card">
+      <img class="logo-about-emblem" src="sk-kabunga-an-logo.png" alt="SK Kabunga-an Official App logo">
+      <div>
+        <div class="logo-about-kicker">Digital Identity</div>
+        <h3>SK Kabunga-an Official App Logo</h3>
+        <p>This is the primary visual identity of the SK Kabunga-an Official App. It represents a modern and organized digital platform created to support SK operations and make essential information easier to manage and access.</p>
+        <p><strong>What it represents:</strong> youth registration, financial management, projects and activities, attendance, records, and other tools designed to support efficient and responsible youth service.</p>
+      </div>
+    </article>
+
+    <article class="logo-about-card">
+      <img class="logo-about-emblem" src="sk-kabunga-an-seal.png" alt="SK Kabunga-an seal">
+      <div>
+        <div class="logo-about-kicker">Youth Leadership</div>
+        <h3>SK Kabunga-an Seal</h3>
+        <p>The SK Kabunga-an seal represents the local Sangguniang Kabataan and its role in youth leadership, participation, public service, and community development within Barangay Kabunga-an.</p>
+        <p>This website uses the seal as an institutional identifier for the local youth council. Individual design elements are not assigned specific meanings here unless an official published explanation is available.</p>
+      </div>
+    </article>
+
+    <article class="logo-about-card">
+      <img class="logo-about-emblem" src="barangay-kabunga-an-logo.png" alt="Barangay Kabunga-an seal">
+      <div>
+        <div class="logo-about-kicker">Community Identity</div>
+        <h3>Barangay Kabunga-an Seal</h3>
+        <p>The Barangay Kabunga-an seal represents the identity of the barangay, its local government, and the community it serves as part of Baybay City, Leyte.</p>
+        <p>Because a published official explanation of the seal's individual symbols was not found, this website does not assign meanings to specific colors or elements of the seal.</p>
+        <p class="logo-source">Reference: <a href="https://baybaycity.gov.ph/government/barangays/east/kabungaan/" target="_blank" rel="noopener noreferrer">City of Baybay — Kabungaan Barangay Profile ↗</a></p>
+      </div>
+    </article>
+
+    <article class="logo-about-card">
+      <img class="logo-about-emblem" src="baybay-logo.png" alt="Official seal of Baybay City, Leyte">
+      <div>
+        <div class="logo-about-kicker">City Identity</div>
+        <h3>Official Seal of Baybay City</h3>
+        <p>The official city explanation identifies the Rizal Monument at the center as a symbol of Baybay itself. Other elements represent the city's livelihood, natural resources, hopes, and development.</p>
+        <ul class="logo-symbol-list">
+          <li><strong>Rice fields and rays</strong> — development and success.</li>
+          <li><strong>Dove</strong> — peace and hope.</li>
+          <li><strong>Coconut and abaca</strong> — major local trades.</li>
+          <li><strong>Fisherman</strong> — the fishing livelihood of Baybayanons.</li>
+          <li><strong>Mount Pangasugan</strong> — natural resources and aspirations.</li>
+          <li><strong>Waterfalls and river</strong> — a source of life for the people.</li>
+          <li><strong>Surrounding dots</strong> — Baybay City's 92 barangays.</li>
+        </ul>
+        <p class="logo-source">Source: <a href="https://baybaycity.gov.ph/about-city/about/seal/" target="_blank" rel="noopener noreferrer">City of Baybay — The Official Seal ↗</a></p>
+      </div>
+    </article>
+  </div>
+</section>
 
 <footer>
 <div class="footer-logos">
