@@ -305,6 +305,46 @@
       margin-top: 17px;
     }
 
+    .mission-vision-grid {
+      max-width: 1000px;
+      margin: 52px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      background: #f8fbff;
+      border-top: 1px solid #dbeafe;
+      border-bottom: 1px solid #dbeafe;
+    }
+
+    .mission-vision-item {
+      padding: 34px 38px;
+    }
+
+    .mission-vision-item + .mission-vision-item {
+      border-left: 1px solid #dbeafe;
+    }
+
+    .mission-vision-kicker {
+      margin-bottom: 8px;
+      color: #1677e8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .mission-vision-item h3 {
+      margin-bottom: 12px;
+      color: #082f6b;
+      font-size: 26px;
+    }
+
+    .mission-vision-item p {
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.75;
+      text-align: left;
+    }
+
     /* FEATURES */
 
     .features-section {
@@ -997,6 +1037,15 @@
     /* TABLET */
 
     @media (max-width: 850px) {
+      .mission-vision-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-vision-item + .mission-vision-item {
+        border-left: 0;
+        border-top: 1px solid #dbeafe;
+      }
+
       .cards {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1095,6 +1144,18 @@
       .about-card,
       .privacy-card {
         padding: 25px 22px;
+      }
+
+      .mission-vision-grid {
+        margin-top: 36px;
+      }
+
+      .mission-vision-item {
+        padding: 28px 22px;
+      }
+
+      .mission-vision-item h3 {
+        font-size: 24px;
       }
 
       .guide-feature {
@@ -1200,8 +1261,6 @@
 </nav>
 </div>
 </header>
-
-
 <section class="about-section" id="about">
 <div class="container">
 <div class="section-title">
@@ -1224,11 +1283,20 @@
           available even without a continuous internet
           connection.
         </p>
+</div><div aria-label="Mission and Vision" class="mission-vision-grid">
+<section class="mission-vision-item">
+<div class="mission-vision-kicker">Our Purpose</div>
+<h3>Mission</h3>
+<p>To provide the Sangguniang Kabataan of Barangay Kabunga-an with a reliable, accessible, and offline-first digital platform that simplifies youth registration, financial management, project and activity monitoring, attendance, records, and other essential SK operations—helping officials serve the youth with greater organization, transparency, and efficiency.</p>
+</section>
+<section class="mission-vision-item">
+<div class="mission-vision-kicker">Our Direction</div>
+<h3>Vision</h3>
+<p>To build a more digitally empowered, organized, transparent, and youth-centered Sangguniang Kabataan in Barangay Kabunga-an, where technology strengthens public service, improves access to information, supports responsible governance, and encourages meaningful participation among young people in the community.</p>
+</section>
 </div>
 </div>
 </section>
-
-
 <footer>
 <div class="footer-logos">
 <img alt="City of Baybay Logo" src="baybay-logo.png"/>
