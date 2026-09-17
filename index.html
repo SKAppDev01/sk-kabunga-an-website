@@ -1194,15 +1194,14 @@
     }
 
     .home-gallery-wrap {
-      max-width: 1120px;
+      max-width: 720px;
       margin: auto;
     }
 
-    .home-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      align-items: stretch;
+    .home-gallery-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .home-gallery-card,
@@ -1217,6 +1216,12 @@
     .home-gallery-card {
       display: flex;
       flex-direction: column;
+    }
+
+
+    .home-gallery-image-panel,
+    .home-map-card {
+      width: 100%;
     }
 
     .home-map-card {
@@ -1353,17 +1358,11 @@
       font-size: 16px;
     }
 
-    @media (max-width: 850px) {
-      .home-gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .home-map-frame {
-        min-height: 380px;
-      }
-    }
-
     @media (max-width: 600px) {
+      .home-map-frame {
+        min-height: 340px;
+      }
+
       .home-gallery-section {
         padding-top: 42px;
         padding-bottom: 58px;
@@ -1443,7 +1442,7 @@
         Discover the scenic beauty of Kabunga-an through these featured views.
       </p>
 </div>
-<div class="home-gallery-wrap"><div class="home-gallery-grid">
+<div class="home-gallery-wrap"><div class="home-gallery-stack">
 <div class="home-gallery-card home-gallery-image-panel"><div class="home-gallery-viewport">
 <button aria-label="Previous image" class="home-gallery-arrow prev" id="home-gallery-prev" type="button">
             ‹
